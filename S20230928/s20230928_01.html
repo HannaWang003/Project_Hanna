@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table{
+        table {
             border: 3px solid #FFC9C9;
+            border-collapse: collapse;
         }
+
         tr,
         td {
-            border: 1px dotted black;
+            border: 5px solid white;
+            border-collapse: collapse;
+            border-radius: 20px;
         }
 
         table {
@@ -27,22 +31,30 @@
         }
 
         h1 {
-            color: #4A4A4A;
+            color: #727272;
             text-align: center;
         }
 
         .container {
-            width:50%;
+            width: 50%;
             background-color: #fff2f2;
-            margin: auto;      
+            margin: auto;
+            border-radius: 20px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>功課表</h1>
+    <div class="container">        
         <table>
+            <tr>
+                <td colspan="6"><h1>功課表</h1></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
             <!-- 花太多時間在打表格內的數字，
             請使用2位數，就可以用alt+左鍵點選的方式
             同時修改十位數的數字-->
