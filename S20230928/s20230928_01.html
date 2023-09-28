@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table,
+        table{
+            border: 3px solid #FFC9C9;
+        }
         tr,
         td {
-            border: 1px solid black;
+            border: 1px dotted black;
         }
 
         table {
@@ -21,29 +23,32 @@
         td {
             height: 50px;
             text-align: center;
+            font-family: fantasy;
         }
 
-        h3 {
+        h1 {
+            color: #4A4A4A;
             text-align: center;
         }
 
         .container {
             width:50%;
-            /* background-color: aqua; */
+            background-color: #fff2f2;
             margin: auto
+            
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h3>功課表</h3>
+        <h1>功課表</h1>
         <table>
             <!-- 花太多時間在打表格內的數字，
             請使用2位數，就可以用alt+左鍵點選的方式
             同時修改十位數的數字-->
             <!-- 1 1~6-->
-            <tr>
+            <tr bgcolor="#FFB5B5">
                 <td>節數</td>
                 <td>一</td>
                 <td>二</td>
@@ -54,7 +59,7 @@
             <!-- 2 7~12-->
             <tr>
                 <td>早自習<br>0750~0830</td>
-                <td colspan="5"></td>
+                <td colspan="5" bgcolor="#FFE8E8"></td>
                 <!-- <td>9</td> -->
                 <!-- <td>10</td> -->
                 <!-- <td>11</td> -->
@@ -99,7 +104,7 @@
             <!-- 7 37~42-->
             <tr>
                 <td>午休時間<br>1200~1320</td>
-                <td colspan="5"></td>
+                <td colspan="5" bgcolor="#FFE8E8"></td>
                 <!-- <td>39</td> -->
                 <!-- <td>40</td> -->
                 <!-- <td>41</td> -->
