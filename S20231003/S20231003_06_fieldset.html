@@ -15,7 +15,7 @@
     fieldset {
       /* border-radius: 10px; */
       margin: 0px 20px 20px 10px;
-      border-color: rgb(0,164,199);
+      border:1px solid rgb(0,164,199);
     }
 
     legend {
@@ -64,7 +64,7 @@
       /* border: 1px solid black; */
       /* background-color: rgb(200, 180, 183); */
       padding: 5px;
-      border-bottom:1px solid rgb(0,164,199);
+      /* border-bottom:1px solid rgb(0,164,199); */
     }
 
     /* backgroundColor */
@@ -87,6 +87,9 @@
     .bgc-4 {
       background-color: rgb(161,193,218);
     }
+    .bgc-5{
+    background-color:rgba(0,164,199,0.3);
+    }
 
     /* textColor */
 
@@ -107,8 +110,8 @@
     }
 
     /* borderRadius */
-    .border-20r {
-      border-radius: 20px;
+    .border-50r {
+      border-radius: 50px;
     }
 
     .border-5r {
@@ -160,10 +163,10 @@
   <!-- form -->
   <div class="container w-80">
     <form action="">
-      <table class="bgc-4 border-20r b-s1 table-1">
+      <table class="bgc-4 border-50r b-s1 table-1">
         <tr>
           <!-- photo -->
-          <td class="w-30 bgc-3 border-20r p-10 text-center">
+          <td class="w-30 bgc-3 border-50r p-10 text-center">
             <img src="https://fakeimg.pl/250x350/">
             <!-- <hr style="width:70%;text-align:left;margin-left:0">
             <hr style="width:70%;text-align:right;margin-right:0"> -->
@@ -182,7 +185,7 @@
                   <td rowspan="2">
                     <!-- 單行輸入input:text 姓名-->
                     <div class="container1">
-                      <label for="name">Name</label><br>
+                      <label for="name">NAME</label><br>
                       <input type="text" name="myName" id="name" />
                     </div>
                     <!-- 電話輸入input:tel 家用電話-->
@@ -194,18 +197,18 @@
                     </div>
                     <!-- 電話輸入input:tel 手機-->
                     <div class="container1">
-                      <label for="phone">mobile</label><br>
+                      <label for="phone">MOBILE</label><br>
                       <input class="w-f" type="tel" name="myPhone" id="phone" placeholder="請輸入手機號碼(如：0912345678)" />
                       <small>範例: 0912345678</small>
                     </div>
                     <!-- 單行輸入input:text 地址-->
                     <div class="container1">
-                      <label for="address">Address</label><br>
+                      <label for="address">ADDRESS</label><br>
                       <input class="w-f" type="text" name="myAddress" id="address" />
                     </div>
                     <!-- 下拉式選單_select*name>option*value 部門-->
                     <div class="container1">
-                      <label for="department">Department</label><br>
+                      <label for="department">DEPARTMENT</label><br>
                       <select class="w-f" name="myDepartment" id="department">
                         <option value="">option</option>
                         <option value="d1">Dpart 1</option>
@@ -214,8 +217,8 @@
                       </select>
                     </div>
                     <!-- 單選_input:radio *name相同 性別-->
-                    <div class="container1">
-                      <label for="man">Gender</label><br>
+                    <div class="container1 bgc-5 border-5r" style="margin:10px 0;">
+                      <label for="man">GENDER</label><br>
                         <input type="radio" name="mySex" id="man" value="male" />
                         <label for="man">Male</label>
                         <input type="radio" name="mySex" id="woman" value="Female" />
@@ -224,8 +227,8 @@
                         <label for="non">not to say</label>
                       </div>
                       <!-- 多選_input:checkbox *name陣列 專長-->
-                      <div class="container1">
-                        <label for="">Skill</label><br>
+                      <div class="container1 bgc-5 border-5r" style="margin:10px 0;">
+                        <label for="">SKILL</label><br>
                         <input type="checkbox" name="myCheck[]" id="s1" />
                         <label for="skil_1">skill_1</label>
                         <input type="checkbox" name="myCheck[]" id="s2" />
@@ -237,7 +240,7 @@
                   <td class="d-flex" style="justify-content:space-around">
                     <!-- 多行輸入_textarea 備註 -->
                     <div class="container1" style="border:0px;">
-                      <h3>Notes</h3>
+                      <h3>NOTE</h3>
                       <textarea name="myTextarea" id="" cols="50" rows="20">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas in! Commodi recusandae quidem, saepe est modi, alias, adipisci dolore sit sapiente quaerat delectus quae ducimus corporis molestiae dolorem porro.
                             Vero, ipsam! Saepe eaque ipsum quia, quas at, dignissimos eius reprehenderit similique doloribus porro sunt laudantium neque natus repudiandae eveniet est ab quisquam. Cumque veritatis, eum veniam facilis hic perspiciatis!
