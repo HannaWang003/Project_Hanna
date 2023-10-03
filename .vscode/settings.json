@@ -2,5 +2,6 @@
     "liveServer.settings.port": 5501,
     "editor.language.brackets": [
 
-    ]
+    ],
+    "liveServer.settings.multiRootWorkspaceName": "Project_Hanna"
 }
