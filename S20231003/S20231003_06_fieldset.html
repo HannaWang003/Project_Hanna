@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fieldset</title>
+    <style>
+      legend {
+        padding: 5px 10px;
+      }
+      table {
+        width: 100%;
+        color: white;
+      }
+      td {
+        border: 1px solid black;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .container {
+        margin: auto;
+        width: 50%;
+      }
+      .bgc-1 {
+        background-color: rgb(170, 135, 165);
+      }
+      .bgc-2 {
+        background-color: #000;
+      }
+      .text-c1 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="text-center">fieldset</h3>
+    <div class="container">
+      <fieldset class="bgc-1">
+        <legend class="bgc-2 text-c1">HR報表</legend>
+        <table>
+          <tr>
+            <td rowspan="2">
+              <div class="container1">
+                <label for="name">姓名</label>
+                <input type="text" name="" id="" />
+              </div>
+              <div class="container1">
+                <label for="tel">電話</label>
+                <input type="tel" name="myTel" id="tel" />
+              </div>
+              <div class="container1">
+                <label for="address">地址</label>
+                <input type="text" name="myaddress" id="" />
+              </div>
+              <div class="container1">
+                <label for="">下拉選單</label>
+                <select name="mySelect" id="">
+                  <option value="">請選擇</option>
+                  <option value="s1">選項一</option>
+                  <option value="s2">選項二</option>
+                  <option value="s3">選項三</option>
+                </select>
+              </div>
+              <div class="container1">
+                <label for="">性別</label>
+                <input type="radio" name="mySex" id="1" />
+                <label for="">男</label>
+                <input type="radio" name="mySex" id="2" />
+                <label for="">女</label>
+                <input type="radio" name="mySex" id="0" />
+                <label for="">不提供</label>
+              </div>
+              <div class="container1">
+                <label for="">多選</label>
+                <input type="checkbox" name="myCheck[]" id="" />
+                <input type="checkbox" name="myCheck[]" id="" />
+                <input type="checkbox" name="myCheck[]" id="" />
+              </div>
+            </td>
+            <td>
+              <div class="container1">
+                <h3>備註</h3>
+                <textarea name="myTextarea" id="" cols="30" rows="10">
+          111
+                      </textarea
+                >
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!-- <td>11</td> -->
+            <td>
+              <div class="container1">
+                <input type="reset" value="重整" />
+                <input type="submit" value="送出" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+  </body>
+</html>

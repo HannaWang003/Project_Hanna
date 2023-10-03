@@ -7,9 +7,9 @@
   </head>
   <body>
     <div class="container">
-      <h3>form:&nbsp;&nbsp;select</h3>
+      <h3>form:&nbsp;&nbsp;select(下拉選單)</h3>
       <p>
-        <select name="s" id="">
+        <select name="mySelect" id="">
           <option value="">請選擇</option>
           <option value="s">s1</option>
           <option value="s">s2</option>
@@ -18,15 +18,45 @@
       </p>
     </div>
     <div class="container">
-      <h3>form:&nbsp;&nbsp;radio</h3>
+      <h3>form:&nbsp;&nbsp;radio(單選)</h3>
       <p>
-        <input type="radio" name="" id="" />
+        <input type="radio" name="myRadio" id="" />
         <label for="item1">item1</label>
-        <input type="radio" name="" id="" />
+        <input type="radio" name="myRadio" id="" />
         <label for="item2">item2</label>
-        <input type="radio" name="" id="" />
+        <input type="radio" name="myRadio" id="" />
         <label for="item3">item3</label>
       </p>
+    </div>
+    <div class="container">
+      <h3>form:&nbsp;&nbsp;check(多選)</h3>
+      <!-- []代表陣列 array -->
+      <input type="checkbox" name="myCheck[]" id="check1" />
+      <label for="check1">html</label>
+      <input type="checkbox" name="myCheck[]" id="check2" />
+      <label for="check2">CSS</label>
+      <input type="checkbox" name="myCheck[]" id="check3" />
+      <label for="check3">PHP</label>
+    </div>
+    <div class="container">
+      <h3>submit</h3>
+      <input type="submit" value="submit" />
+    </div>
+    <div class="container">
+      <h3>reset</h3>
+      <input type="reset" value="reset" />
+    </div>
+    <div class="container">
+      <h3>password</h3>
+      <input type="password" name="" id="" />
+    </div>
+    <div class="container">
+      <h3>textarea</h3>
+      <!-- 依pre的樣式 -->
+      <textarea name="myTextarea" id="" cols="30" rows="10">
+            hello
+      world!
+      </textarea>
     </div>
   </body>
 </html>
