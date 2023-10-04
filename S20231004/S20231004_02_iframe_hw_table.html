@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用table排版放入ifram</title>
+    <style>
+      /* 測試版面用 */
+      table,
+      tr,
+      td {
+        /* border: 1px solid #000; */
+        /* border-collapse: collapse; */
+      }
+      /* element */
+      table,
+      tr,
+      td {
+        /* border-collapse: collapse; */
+      }
+      table {
+        width: 100%;
+        /* background-color: beige; */
+        margin: auto;
+      }
+      td {
+        width: 70%;
+        height: 80vh;
+        padding: 20px;
+        background-color: blanchedalmond;
+        border: 1px solid #000;
+        border-radius: 20px;
+      }
+      iframe {
+        width: 90%;
+        height: 90%;
+      }
+      /* divContainer */
+      .container {
+        background-color: blue;
+        width: 60%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .container1 {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* background-color: aquamarine; */
+      }
+      /* text */
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <!-- youtube iframe-->
+        <table>
+          <tr>
+            <td class="text-center">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/xL0ch83RAK8?si=6f8MPE-LHW7TlfVx"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </td>
+            <td>
+              <h3>YouTube</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
+                voluptatibus vitae asperiores ullam sit dicta porro sunt
+                explicabo illo, perspiciatis deserunt beatae expedita suscipit
+                maxime omnis voluptatum quo quos natus. Quo odit quis
+                consectetur voluptatem maiores, doloribus tempora, eveniet hic
+                accusantium incidunt eum culpa ex ad unde in optio iusto
+                corporis eos repellendus, aliquid asperiores quia ipsam.
+                Dolorem, atque tempore.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container1">
+        <!-- google iframe-->
+        <table>
+          <tr>
+            <td class="text-center">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.796179550977!2d121.41972577600077!3d25.040990138008812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bf82526ba9%3A0x6e95d14c11132e5!2z5piO5b-X56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1696388135349!5m2!1szh-TW!2stw"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </td>
+            <td>
+              <h3>GoogleMap</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
+                voluptatibus vitae asperiores ullam sit dicta porro sunt
+                explicabo illo, perspiciatis deserunt beatae expedita suscipit
+                maxime omnis voluptatum quo quos natus. Quo odit quis
+                consectetur voluptatem maiores, doloribus tempora, eveniet hic
+                accusantium incidunt eum culpa ex ad unde in optio iusto
+                corporis eos repellendus, aliquid asperiores quia ipsam.
+                Dolorem, atque tempore.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
