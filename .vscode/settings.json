@@ -1,7 +1,9 @@
 {
-    "liveServer.settings.port": 5501,
+    // "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5500,
     "editor.language.brackets": [
 
     ],
-    "liveServer.settings.multiRootWorkspaceName": "Project_Hanna"
+    "liveServer.settings.multiRootWorkspaceName": "Project_Hanna",
+    "liveServer.settings.fullReload": true,
 }
