@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>viedo</title>
+    <style>
+      /* 版面測試用 */
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+
+      /* element */
+      body {
+        background-color: bisque;
+      }
+      video {
+        width: 400px;
+        height: 300px;
+      }
+      table {
+        width: 80%;
+        height: 80vh;
+        margin: auto;
+        background-color: blueviolet;
+      }
+      /* div */
+      .container {
+        background-color: aquamarine;
+        width: 90%;
+        height: 80vh;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <h3>video</h3>
+            <!-- autoplay + muted -->
+            <video src="./videos/test.mp4" muted autoplay loop controls></video>
+          </td>
+          <td>
+            <h4>Lorem, ipsum.</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consectetur ipsum error deserunt architecto ullam cum, delectus
+              nostrum, unde consequuntur quas qui debitis accusamus quo ipsa
+              quis non voluptatem libero. Praesentium? Cupiditate eaque
+              consequatur quidem possimus animi voluptatem facere incidunt
+              architecto natus neque tenetur, nostrum sed accusamus numquam ipsa
+              autem magnam quis quasi? Veniam ullam delectus architecto, velit
+              provident nobis neque?
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <!-- video+source -->
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <h3>video</h3>
+            <video autoplay loop controls>
+              <source src="./videos/test.mp4" type="video/mp4" />
+            </video>
+          </td>
+          <td>
+            <h4>Lorem, ipsum.</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consectetur ipsum error deserunt architecto ullam cum, delectus
+              nostrum, unde consequuntur quas qui debitis accusamus quo ipsa
+              quis non voluptatem libero. Praesentium? Cupiditate eaque
+              consequatur quidem possimus animi voluptatem facere incidunt
+              architecto natus neque tenetur, nostrum sed accusamus numquam ipsa
+              autem magnam quis quasi? Veniam ullam delectus architecto, velit
+              provident nobis neque?
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <!-- audio+source -->
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <h3>audio</h3>
+            <audio autoplay loop controls muted>
+              <source src="./audio/test_mp3.mp3" type="audio/mp3" />
+            </audio>
+          </td>
+          <td>
+            <h4>Lorem, ipsum.</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consectetur ipsum error deserunt architecto ullam cum, delectus
+              nostrum, unde consequuntur quas qui debitis accusamus quo ipsa
+              quis non voluptatem libero. Praesentium? Cupiditate eaque
+              consequatur quidem possimus animi voluptatem facere incidunt
+              architecto natus neque tenetur, nostrum sed accusamus numquam ipsa
+              autem magnam quis quasi? Veniam ullam delectus architecto, velit
+              provident nobis neque?
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
