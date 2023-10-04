@@ -1,234 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fieldset</title>
+    <style>
+      /* element */
+      body {
+        background-color: rgb(232, 239, 247);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fieldset</title>
-  <style>
-    /* element */
-    body {
-      background-color: rgb(232, 239, 247);
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+      fieldset {
+        /* border-radius: 10px; */
+        margin: 0px 20px 20px 10px;
+        border: 1px solid rgb(0, 164, 199);
+      }
 
-    fieldset {
-      /* border-radius: 10px; */
-      margin: 0px 20px 20px 10px;
-      border:1px solid rgb(0,164,199);
-    }
+      legend {
+        padding: 10px;
+      }
 
-    legend {
-      padding: 10px;
-    }
+      input {
+        /* background-color: rgb(245, 246, 250); */
+        background-color: rgb(254, 242, 246);
+        border: 0px;
+        height: 35px;
+        border-radius: 5px;
+      }
 
-    input {
-      /* background-color: rgb(245, 246, 250); */
-      background-color:rgb(254,242,246);
-      border: 0px;
-      height: 35px;
-      border-radius: 5px;
-    }
+      select {
+        width: -webkit-fill-available;
+        height: 35px;
+        background-color: rgb(245, 246, 250);
+        border: 0px;
+        border-radius: 5px;
+      }
 
-    select {
-      width: -webkit-fill-available;
-      height: 35px;
-      background-color: rgb(245, 246, 250);
-      border: 0px;
-      border-radius: 5px;
-    }
+      table {
+        margin: auto;
+      }
 
-    table {
-      margin: auto;
-    }
+      table,
+      tr,
+      td {
+        border-collapse: collapse;
+      }
 
-    table,
-    tr,
-    td {
-      border-collapse: collapse;
-    }
+      textarea {
+        border: 0;
+        border-radius: 10px;
+        /* background-color: rgb(245, 246, 250); */
+        background-color: rgb(254, 242, 246);
+      }
 
-    textarea {
-      border: 0;
-      border-radius: 10px;
-      /* background-color: rgb(245, 246, 250); */
-      background-color:rgb(254,242,246);
-    }
+      /* divContainer */
+      .container {
+        margin: auto;
+      }
 
-    /* divContainer */
-    .container {
-      margin: auto;
-    }
+      .container1 {
+        /* border: 1px solid black; */
+        /* background-color: rgb(200, 180, 183); */
+        padding: 5px;
+        /* border-bottom:1px solid rgb(0,164,199); */
+      }
 
-    .container1 {
-      /* border: 1px solid black; */
-      /* background-color: rgb(200, 180, 183); */
-      padding: 5px;
-      /* border-bottom:1px solid rgb(0,164,199); */
-    }
+      /* backgroundColor */
+      .bgc-0 {
+        background-color: rgb(232, 239, 247);
+      }
 
-    /* backgroundColor */
-    .bgc-0 {
-      background-color: rgb(232, 239, 247);
-    }
+      .bgc-1 {
+        background-color: rgb(245, 246, 250);
+      }
 
-    .bgc-1 {
-      background-color: rgb(245, 246, 250);
-    }
+      .bgc-2 {
+        background-color: rgb(233, 233, 233);
+      }
 
-    .bgc-2 {
-      background-color: rgb(233, 233, 233);
-    }
+      .bgc-3 {
+        background-color: rgb(255, 180, 0);
+      }
 
-    .bgc-3 {
-      background-color: rgb(255,180,0);
-    }
+      .bgc-4 {
+        background-color: rgb(161, 193, 218);
+      }
+      .bgc-5 {
+        background-color: rgba(0, 164, 199, 0.3);
+      }
 
-    .bgc-4 {
-      background-color: rgb(161,193,218);
-    }
-    .bgc-5{
-    background-color:rgba(0,164,199,0.3);
-    }
+      /* textColor */
 
-    /* textColor */
+      .text-center {
+        text-align: center;
+      }
 
-    .text-center {
-      text-align: center;
-    }
+      .text-w1 {
+        color: white;
+      }
 
-    .text-w1 {
-      color: white;
-    }
+      .text-b1 {
+        color: rgb(0, 0, 0);
+      }
 
-    .text-b1 {
-      color: rgb(0, 0, 0);
-    }
+      .text-LH0 {
+        line-height: 0px;
+      }
 
-    .text-LH0 {
-      line-height: 0px;
-    }
+      /* borderRadius */
+      .border-50r {
+        border-radius: 50px;
+      }
 
-    /* borderRadius */
-    .border-50r {
-      border-radius: 50px;
-    }
+      .border-5r {
+        border-radius: 5px;
+      }
 
-    .border-5r {
-      border-radius: 5px;
-    }
+      /* width */
+      .w-80 {
+        width: 80%;
+      }
 
-    /* width */
-    .w-80 {
-      width: 80%;
-    }
+      .w-30 {
+        width: 30%;
+      }
 
-    .w-30 {
-      width: 30%;
-    }
+      .w-f {
+        width: -webkit-fill-available;
+      }
 
-    .w-f {
-      width: -webkit-fill-available;
-    }
+      /* padding */
+      .p-10 {
+        padding: 10px;
+      }
 
-    /* padding */
-    .p-10 {
-      padding: 10px;
-    }
+      /* boxShadow */
+      .b-s1 {
+        box-shadow: 1px 15px 20px 0px rgb(144, 172, 213);
+      }
 
-    /* boxShadow */
-    .b-s1 {
-      box-shadow: 1px 15px 20px 0px rgb(144, 172, 213);
-    }
+      /* table */
+      .table-1 {
+        width: 100%;
+      }
 
-    /* table */
-    .table-1 {
-      width: 100%;
-    }
+      .table-2 {
+        width: 100%;
+      }
 
-    .table-2 {
-      width: 100%;
-    }
+      /* display */
+      .d-flex {
+        display: flex;
+      }
+    </style>
+  </head>
 
-    /* display */
-    .d-flex {
-      display: flex;
-    }
-
-  </style>
-</head>
-
-<body>
-  <h3 class="text-center">fieldset(HomeWork)</h3>
-  <!-- form -->
-  <div class="container w-80">
-    <form action="">
-      <table class="bgc-4 border-50r b-s1 table-1">
-        <tr>
-          <!-- photo -->
-          <td class="w-30 bgc-3 border-50r p-10 text-center">
-            <img src="https://fakeimg.pl/250x350/">
-            <!-- <hr style="width:70%;text-align:left;margin-left:0">
+  <body>
+    <h3 class="text-center">fieldset(HomeWork)</h3>
+    <!-- form -->
+    <div class="container w-80">
+      <form action="" enctype="multipart/form-data">
+        <table class="bgc-4 border-50r b-s1 table-1">
+          <tr>
+            <!-- photo -->
+            <td class="w-30 bgc-3 border-50r p-10 text-center">
+              <img src="https://fakeimg.pl/250x350/" />
+              <!-- <hr style="width:70%;text-align:left;margin-left:0">
             <hr style="width:70%;text-align:right;margin-right:0"> -->
-            <h2>Profile</h2>
-            <hr>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, libero.</p>
-          </td>
-          <td>
-            <fieldset>
-              <legend class="text-b1 text-center">
-                <h3 class="text-LH0">Personnel information</h3>
-                <p>HR報表</p>
-              </legend>
-              <table class="table-2">
-                <tr>
-                  <td rowspan="2">
-                    <!-- 單行輸入input:text 姓名-->
-                    <div class="container1">
-                      <label for="name">NAME</label><br>
-                      <input type="text" name="myName" id="name" />
-                    </div>
-                    <!-- 電話輸入input:tel 家用電話-->
-                    <div class="container1">
-                      <label for="phone">TEL</label><br>
-                      <input class="w-f" type="tel" name="myPhone" id="phone"
-                        placeholder="請輸入包含區碼的室內電話(如：02-12345678)" />
-                      <small>範例: 02-12345678</small>
-                    </div>
-                    <!-- 電話輸入input:tel 手機-->
-                    <div class="container1">
-                      <label for="phone">MOBILE</label><br>
-                      <input class="w-f" type="tel" name="myPhone" id="phone" placeholder="請輸入手機號碼(如：0912345678)" />
-                      <small>範例: 0912345678</small>
-                    </div>
-                    <!-- 單行輸入input:text 地址-->
-                    <div class="container1">
-                      <label for="address">ADDRESS</label><br>
-                      <input class="w-f" type="text" name="myAddress" id="address" />
-                    </div>
-                    <!-- 下拉式選單_select*name>option*value 部門-->
-                    <div class="container1">
-                      <label for="department">DEPARTMENT</label><br>
-                      <select class="w-f" name="myDepartment" id="department">
-                        <option value="">option</option>
-                        <option value="d1">Dpart 1</option>
-                        <option value="d2">Dpart 2</option>
-                        <option value="d3">Dpart 3</option>
-                      </select>
-                    </div>
-                    <!-- 單選_input:radio *name相同 性別-->
-                    <div class="container1 bgc-5 border-5r" style="margin:10px 0;">
-                      <label for="man">GENDER</label><br>
-                        <input type="radio" name="mySex" id="man" value="male" />
+              <h2>Profile</h2>
+              <hr />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci, libero.
+              </p>
+              <input class="bgc-3" type="file" name="12" id="" />
+            </td>
+            <td>
+              <fieldset>
+                <legend class="text-b1 text-center">
+                  <h3 class="text-LH0">Personnel information</h3>
+                  <p>HR報表</p>
+                </legend>
+                <table class="table-2">
+                  <tr>
+                    <td rowspan="2">
+                      <!-- 單行輸入input:text 姓名-->
+                      <div class="container1">
+                        <label for="name">NAME</label><br />
+                        <input type="text" name="myName" id="name" />
+                      </div>
+                      <!-- 電話輸入input:tel 家用電話-->
+                      <div class="container1">
+                        <label for="phone">TEL</label><br />
+                        <input
+                          class="w-f"
+                          type="tel"
+                          name="myPhone"
+                          id="phone"
+                          placeholder="請輸入包含區碼的室內電話(如：02-12345678)"
+                        />
+                        <small>範例: 02-12345678</small>
+                      </div>
+                      <!-- 電話輸入input:tel 手機-->
+                      <div class="container1">
+                        <label for="phone">MOBILE</label><br />
+                        <input
+                          class="w-f"
+                          type="tel"
+                          name="myPhone"
+                          id="phone"
+                          placeholder="請輸入手機號碼(如：0912345678)"
+                        />
+                        <small>範例: 0912345678</small>
+                      </div>
+                      <!-- 單行輸入input:text 地址-->
+                      <div class="container1">
+                        <label for="address">ADDRESS</label><br />
+                        <input
+                          class="w-f"
+                          type="text"
+                          name="myAddress"
+                          id="address"
+                        />
+                      </div>
+                      <!-- 下拉式選單_select*name>option*value 部門-->
+                      <div class="container1">
+                        <label for="department">DEPARTMENT</label><br />
+                        <select class="w-f" name="myDepartment" id="department">
+                          <option value="">option</option>
+                          <option value="d1">Dpart 1</option>
+                          <option value="d2">Dpart 2</option>
+                          <option value="d3">Dpart 3</option>
+                        </select>
+                      </div>
+                      <!-- 單選_input:radio *name相同 性別-->
+                      <div
+                        class="container1 bgc-5 border-5r"
+                        style="margin: 10px 0"
+                      >
+                        <label for="man">GENDER</label><br />
+                        <input
+                          type="radio"
+                          name="mySex"
+                          id="man"
+                          value="male"
+                        />
                         <label for="man">Male</label>
-                        <input type="radio" name="mySex" id="woman" value="Female" />
+                        <input
+                          type="radio"
+                          name="mySex"
+                          id="woman"
+                          value="Female"
+                        />
                         <label for="woman">Female</label>
                         <input type="radio" name="mySex" id="non" value="non" />
                         <label for="non">not to say</label>
                       </div>
                       <!-- 多選_input:checkbox *name陣列 專長-->
-                      <div class="container1 bgc-5 border-5r" style="margin:10px 0;">
-                        <label for="">SKILL</label><br>
+                      <div
+                        class="container1 bgc-5 border-5r"
+                        style="margin: 10px 0"
+                      >
+                        <label for="">SKILL</label><br />
                         <input type="checkbox" name="myCheck[]" id="s1" />
                         <label for="skil_1">skill_1</label>
                         <input type="checkbox" name="myCheck[]" id="s2" />
@@ -236,36 +271,45 @@
                         <input type="checkbox" name="myCheck[]" id="s3" />
                         <label for="skil_3">cskill_3</label>
                       </div>
-                  </td>
-                  <td class="d-flex" style="justify-content:space-around">
-                    <!-- 多行輸入_textarea 備註 -->
-                    <div class="container1" style="border:0px;">
-                      <h3>NOTE</h3>
-                      <textarea name="myTextarea" id="" cols="50" rows="20">
+                    </td>
+                    <td class="d-flex" style="justify-content: space-around">
+                      <!-- 多行輸入_textarea 備註 -->
+                      <div class="container1" style="border: 0px">
+                        <h3>NOTE</h3>
+                        <textarea name="myTextarea" id="" cols="50" rows="20">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas in! Commodi recusandae quidem, saepe est modi, alias, adipisci dolore sit sapiente quaerat delectus quae ducimus corporis molestiae dolorem porro.
                             Vero, ipsam! Saepe eaque ipsum quia, quas at, dignissimos eius reprehenderit similique doloribus porro sunt laudantium neque natus repudiandae eveniet est ab quisquam. Cumque veritatis, eum veniam facilis hic perspiciatis!
-                            </textarea>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <!-- <td>11</td> -->
-                  <!-- <td class="d-flex"> -->
-                  <td>
-                    <div class="container1 text-center d-flex" style="justify-content:space-around;border:0px">
-                      <input class="bgc-3 w-30" type="reset" value="reset" />
-                      <input class="bgc-3 w-30" type="submit" value="submit" />
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </fieldset>
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-  <footer class="text-center" style="margin:20px 0 0 0;">&copy 2023-10-04 003_HannaWang</footer>
-</body>
-
+                            </textarea
+                        >
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- <td>11</td> -->
+                    <!-- <td class="d-flex"> -->
+                    <td>
+                      <div
+                        class="container1 text-center d-flex"
+                        style="justify-content: space-around; border: 0px"
+                      >
+                        <input class="bgc-3 w-30" type="reset" value="reset" />
+                        <input
+                          class="bgc-3 w-30"
+                          type="submit"
+                          value="submit"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <footer class="text-center" style="margin: 20px 0 0 0">
+      &copy 2023-10-04 003_HannaWang
+    </footer>
+  </body>
 </html>
