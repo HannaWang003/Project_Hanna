@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        table,
+        tr,
+        td {
+            border: 5px rgb(47, 156, 101) solid;
+        }
+
+        table {
+            /* width:50%; */
+            text-align: center;
+            border-collapse: collapse;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            color: rgb(47, 161, 255);
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(245, 242, 87)
+        }
+        .fc1{
+            color:rgb(240, 66, 147);
+        }
+        .fc2{
+            color:blue;
+        }
+        .fc3{
+            color:rgb(161, 105, 214);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>九宮格</h1>
+    <table>
+        <tr>
+            <td class="fc2">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td class="fc3">4</td>
+            <td class="fc1">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td class="fc2">9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>九宮格合併-colspan</h1>
+    <table>
+        <tr>
+            <td class="fc2" colspan="3">1</td>
+
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td class="fc3">4</td>
+            <td class="fc1">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td class="fc2">9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>九宮格合併-rowspan</h1>
+    <table>
+        <tr>
+            <td class="fc2" colspan="3">1</td>
+
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td class="fc3">4</td>
+            <td class="fc1">5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <!-- <td class="fc2">9</td> -->
+        </tr>
+    </table>
+</body>
+
+</html>

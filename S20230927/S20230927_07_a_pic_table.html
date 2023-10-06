@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link A Tag</title>
+    <style>
+        /* 選擇器 */
+        /* element */
+        h1 {
+            color: red;
+
+        }
+
+        /* id */
+        #testID {
+            color: green;
+        }
+
+        /* class */
+        .testClass {
+            color: blue;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>table "picsum"</h1>
+    <h3 id="testID">
+        #id Style
+    </h3>
+    <!-- 班級 -->
+    <!-- 1 2 3 -->
+
+    <!-- 相對路徑 -->
+
+    <!-- 
+    ./表示在同一層找路徑
+   ../在上一層
+   ../../上上一層 -->
+
+    <!-- 絕對路徑 -->
+    <h3 class="testClass">
+        .class Style
+    </h3>
+    <table border="1">
+        <tr>
+            <th>項目</th>
+            <th width="80%" bgcolor="pink">圖片</th>
+            <th>文字介紹</th>
+        </tr>
+        <tr>
+            <td width="10%">1</td>
+            <td width="50%" align="center">
+                <a href="./views/f1.html">
+                    <img src="https://picsum.photos/id/237/200/300" alt="" srcset="">
+                </a>
+            </td>
+            <td width="40%">小班</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td align="center"><a href="./views/f2.html">
+                    <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="">
+                </a>
+            </td>
+            <td>中班</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td align="center"><a href="./views/f3.html">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="" srcset="">
+                </a>
+            </td>
+            <td>大班</td>
+        </tr>
+    </table>
+    <ol>
+        <li><a href="./views/f1.html">
+                <img src="https://picsum.photos/id/237/200/300" alt="" srcset="">
+            </a></li>
+        <li><a href="./views/f2.html">
+                <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="">
+            </a></li>
+        <li><a href="./views/f3.html">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="" srcset="">
+            </a></li>
+    </ol>
+</body>
+
+</html>
