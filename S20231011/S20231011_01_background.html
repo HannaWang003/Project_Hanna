@@ -25,11 +25,53 @@
         background-repeat: no-repeat;
       }
       .box3 {
+        background-image: url(./img/background_02.PNG),
+          url(./img/background_01.PNG);
+        background-color: blueviolet;
+        background-repeat: no-repeat, no-repeat;
+        background-position: right bottom, left top;
+      }
+      .box4 {
+        background-image: url(./img/background_02.PNG);
+        background-color: blueviolet;
+      }
+      .box5 {
+        width: 80vw;
+        height: 100vh;
+        background-image: url(./img/background_01.PNG);
+        background-color: blueviolet;
+        opacity: 0.7;
+      }
+      .box6 {
+        width: 80vw;
+        height: 100vh;
         background-image: url(./img/background_01.PNG),
           url(./img/background_02.PNG);
-        background-color: blueviolet;
         background-repeat: no-repeat;
-        background-position: right bottom, left top;
+        background-position: left top, right bottom;
+      }
+      .box7 {
+        margin: auto;
+        width: 60vw;
+        height: 80vh;
+        background-image: url(./img/background_03.PNG),
+          url(./img/background_03.PNG), url(./img/background_03.PNG),
+          url(./img/background_03.PNG), url(./img/background_03.PNG),
+          url(./img/background_03.PNG);
+        background-repeat: no-repeat;
+        background-position: left top, center top, right top, left bottom,
+          center bottom, right bottom;
+        opacity: 0.7;
+      }
+
+      /* element */
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+      table {
+        margin: auto;
       }
     </style>
   </head>
@@ -38,7 +80,30 @@
     <div class="container box1"></div>
     <!-- 圖片版面變小置中 -->
     <div class="container box2"></div>
-    <!-- 圖片放右下 -->
+    <!-- 2張背景圖搭配透明度 -->
     <div class="container box3"></div>
+    <div class="container box4">
+      <div class="box5"></div>
+    </div>
+    <!-- 多張背景圖 -->
+    <div class="container">
+      <!-- 使用多張底圖 -->
+      <div class="box6">
+        <div class="box7"></div>
+      </div>
+      <!-- 使用table -->
+      <!-- <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table> -->
+    </div>
   </body>
 </html>
