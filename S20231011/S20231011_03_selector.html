@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic selector</title>
+    <style>
+      .container {
+        color: rgb(219, 219, 219);
+      }
+      .classP {
+        color: bisque;
+      }
+      #myP {
+        color: aquamarine;
+      }
+      .box > p {
+        color: rgb(189, 79, 97);
+      }
+      .blue {
+        color: rgb(42, 81, 165);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>basic selector</h2>
+      <!-- id -->
+      <p id="myP">Lorem ipsum dolor sit amet.</p>
+      <!-- class -->
+      <p class="classP">Lorem ipsum dolor sit amet consectetur.</p>
+      <div class="box blue">
+        <p class="blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+          quos?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
