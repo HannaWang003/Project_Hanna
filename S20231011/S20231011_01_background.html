@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>background position</title>
     <style>
       /* div */
       .container {
@@ -25,16 +25,20 @@
         background-repeat: no-repeat;
       }
       .box3 {
-        background-image: url(./img/background_01.PNG);
+        background-image: url(./img/background_01.PNG),
+          url(./img/background_02.PNG);
         background-color: blueviolet;
         background-repeat: no-repeat;
-        background-position: right bottom;
+        background-position: right bottom, left top;
       }
     </style>
   </head>
   <body>
+    <!-- 圖片放左上 -->
     <div class="container box1"></div>
+    <!-- 圖片版面變小置中 -->
     <div class="container box2"></div>
+    <!-- 圖片放右下 -->
     <div class="container box3"></div>
   </body>
 </html>
