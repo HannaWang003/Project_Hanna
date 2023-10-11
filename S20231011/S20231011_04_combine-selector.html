@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 > p {
+        color: blueviolet;
+      }
+      .div2 > p {
+        color: greenyellow;
+      }
+      /* 沒有作用，因為p在下下一層 */
+      .div3 > p {
+        color: brown;
+      }
+      /* 少用空格做css，因為會影響全部的下層 */
+      .div3 p {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        <h3>div1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          earum dolore nostrum ducimus, ipsam perspiciatis odio asperiores,
+          architecto atque ad fugiat quia dignissimos unde distinctio, obcaecati
+          accusamus. Quasi, impedit ratione?
+        </p>
+      </div>
+      <div class="div2">
+        <h3>div2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+          quae?
+        </p>
+      </div>
+      <div class="div3">
+        <div class="div31">
+          <p>div31</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
