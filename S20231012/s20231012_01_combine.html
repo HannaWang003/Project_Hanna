@@ -11,7 +11,7 @@
         color: green;
       }
       .div2 > .p21 {
-        color: blue;
+        color: rgb(88, 88, 104);
       }
       .p21 > .a1 {
         color: lime;
@@ -24,6 +24,14 @@
       }
       .box3 {
         color: blueviolet;
+      }
+      /* 影響全部下層div */
+      .divA div {
+        color: red;
+      }
+      /* 只影響下一層div */
+      .divA > div {
+        color: blue;
       }
     </style>
   </head>
@@ -67,6 +75,26 @@
       <p>Lorem, ipsum.</p>
       <div>
         <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <h3>空格(不要常用)</h3>
+    <div class="divA">
+      divA
+      <div class="divA1">
+        &nbsp;&nbsp;divA1
+        <div class="divA11">
+          &nbsp;&nbsp;&nbsp;&nbsp;divA11
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="test1">
+      <div class="tes2">
+        Lorem.
+        <div>Lorem ipsum dolor sit amet.</div>
       </div>
     </div>
   </body>
