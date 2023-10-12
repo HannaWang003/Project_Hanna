@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .p1,
+      .p2,
+      .p3 {
+        color: green;
+      }
+      .div2 > .p21 {
+        color: blue;
+      }
+      .p21 > .a1 {
+        color: lime;
+      }
+      .box1 > div > p {
+        color: limegreen;
+      }
+      .box2 > div {
+        color: aqua;
+      }
+      .box3 {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- , -->
+      <h3>,</h3>
+      <h4>多組選擇器一起</h4>
+      <p class="p1">p1,Lorem ipsum dolor sit amet.</p>
+      <p class="p2">p2,Lorem ipsum dolor sit amet.</p>
+      <p class="p3">p3,Lorem ipsum dolor sit amet.</p>
+      <br />
+      <hr />
+      <br />
+      <!-- > -->
+      <h3>></h3>
+      <h4>選擇下一層</h4>
+      <div class="div2">
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        <div class="p21">
+          Lorem ipsum dolor sit amet.
+          <div class="a1">Lorem, ipsum dolor.</div>
+        </div>
+      </div>
+    </div>
+    <div class="container box1">
+      <p>Lorem, ipsum.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </div>
+    <div class="container box2">
+      <p>Lorem, ipsum.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </div>
+    <div class="container box3">
+      <p>Lorem, ipsum.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </div>
+  </body>
+</html>
