@@ -20,10 +20,6 @@
       th {
         height: 30px;
       }
-      td {
-        text-decoration: line-through;
-        color: gray;
-      }
       .container {
         width: 80%;
         margin: auto;
@@ -33,19 +29,24 @@
         background-color: antiquewhite;
         color: black;
       }
-      tr:nth-child(even) {
-        background-color: rgb(170, 215, 226);
-      }
-      tr:nth-of-type(odd) {
-        color: rgb(196, 163, 120);
-      }
       tr:nth-child(2) {
-        color: rgb(54, 142, 158);
+        background-color: rgb(209, 224, 228);
+        color: gray;
+        text-decoration: line-through red;
       }
       h3 {
         text-align: center;
         background-color: rgb(182, 238, 219);
         padding: 20px 0;
+      }
+      input[type="submit"] {
+        margin-top: 2vh;
+        background-color: bisque;
+        padding: 15px;
+        color: rgb(218, 172, 22);
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 10px 5px 0px #d1e0e4;
       }
       .nav {
         display: flex;
@@ -59,10 +60,6 @@
       }
       .text-right {
         text-align: right;
-      }
-      .submit {
-        /* background-color:blue; */
-        margin-top: 2vh;
       }
     </style>
   </head>
@@ -94,7 +91,6 @@
           </tr>
           <tr></tr>
         </table>
-        <div class="submit"></div>
       </form>
     </div>
   </body>
