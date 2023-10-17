@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student List</title>
     <style>
+      body{
+      background-image:url(https://picsum.photos/id/275/1728/1080?grayscale);
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      }
       table,
       tr,
       td,
@@ -17,15 +23,14 @@
         width: 100%;
         table-layout: fixed;
       }
-      td,
       th {
         height: 30px;
-      }
-      th {
         background-color: antiquewhite;
         color: black;
+        font-weight:bolder;
       }
       td {
+        font-weight:bold;
         border-radius: 10px;
       }
       tr:nth-child(even) {
@@ -35,6 +40,14 @@
       tr:nth-of-type(odd) {
         background-color: beige;
         color: rgb(54, 88, 8);
+      }
+      tr:nth-of-type(even) > td:nth-of-type(2) > a{
+      text-decoration: none;
+      color:rgb(82, 124, 201);
+      }
+      tr:nth-of-type(odd) > td:nth-of-type(2) > a{
+      text-decoration: none;
+      color:rgb(54, 88, 8);
       }
       button {
         color: rgb(54, 142, 158);
@@ -85,7 +98,7 @@
         </tr>
         <tr>
           <td>1</td>
-          <td>amy</td>
+          <td><a href="edit.html">Amy</a></td>
           <td>0911-111-111</td>
           <td><img src="https://picsum.photos/id/64/100/100" alt="" /></td>
           <td>
@@ -95,7 +108,7 @@
         </tr>
         <tr>
           <td>2</td>
-          <td>bob</td>
+          <td><a href="edit.html">Bob</a></td>
           <td>0922-222-222</td>
           <td><img src="https://picsum.photos/id/201/100/100" alt="" /></td>
           <td>
@@ -105,7 +118,7 @@
         </tr>
         <tr>
           <td>3</td>
-          <td>cat</td>
+          <td><a href="edit.html">Cat</a></td>
           <td>0933-333-333</td>
           <td><img src="https://picsum.photos/id/244/100/100" alt="" /></td>
           <td>
@@ -115,7 +128,7 @@
         </tr>
         <tr>
           <td>4</td>
-          <td>jason</td>
+          <td><a href="edit.html">Jason</a></td>
           <td>0977-885-156</td>
           <td><img src="https://picsum.photos/id/275/100/100" alt="" /></td>
           <td>
@@ -125,7 +138,7 @@
         </tr>
         <tr>
           <td>5</td>
-          <td>coney</td>
+          <td><a href="edit.html">Coney</a></td>
           <td>0955-555-555</td>
           <td><img src="https://picsum.photos/id/292/100/100" alt="" /></td>
           <td>
@@ -135,7 +148,7 @@
         </tr>
         <tr>
           <td>6</td>
-          <td>ann</td>
+          <td><a href="edit.html">Ann</a></td>
           <td>0966-666-666</td>
           <td><img src="https://picsum.photos/id/357/100/100" alt="" /></td>
           <td>
@@ -145,7 +158,7 @@
         </tr>
         <tr>
           <td>7</td>
-          <td>roger</td>
+          <td><a href="edit.html">Roger</a></td>
           <td>09777-777-777</td>
           <td><img src="https://picsum.photos/id/371/100/100" alt="" /></td>
           <td>
