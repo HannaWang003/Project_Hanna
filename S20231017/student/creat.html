@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student - Create</title>
+    <style>
+      table,
+      tr,
+      td {
+        /* border: 1px solid black; */
+        border-collapse: collapse;
+      }
+      table {
+        margin: auto;
+        width: 100%;
+        background-color: blanchedalmond;
+      }
+      td {
+        padding: 15px;
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+        background-color: rgb(182, 238, 219);
+        padding: 20px 0;
+      }
+      input[type="file"] {
+        margin-left: 130px;
+      }
+      .container {
+        width: 80vw;
+        margin: auto;
+        margin-top: 10vh;
+      }
+      .nav {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2vh;
+      }
+      .nav > a {
+        text-decoration: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: rgb(196, 163, 120);
+      }
+    </style>
+  </head>
+  <body>
+    Hello Creat!
+    <div class="container">
+      <h3>Creat</h3>
+      <div class="nav">
+        <a href="index.html">back</a>
+      </div>
+      <form action="" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <td>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobile">mobile</label>
+              <input type="text" name="mobile" id="mobile" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="file"></label>
+              <input type="file" name="file" id="file" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="提交" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
