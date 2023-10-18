@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student List</title>
+    <style>
+      body {
+        background-image: url(https://picsum.photos/id/275/1728/1080?grayscale);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border: 2px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      th {
+        height: 30px;
+        background-color: antiquewhite;
+        color: black;
+        font-weight: bolder;
+      }
+      td {
+        font-weight: bold;
+        border-radius: 10px;
+      }
+      tr:nth-child(even) {
+        background-color: rgb(170, 215, 226);
+        color: rgb(82, 124, 201);
+      }
+      tr:nth-of-type(odd) {
+        background-color: beige;
+        color: rgb(54, 88, 8);
+      }
+      tr:nth-of-type(even) > td:nth-of-type(2) > a {
+        text-decoration: none;
+        color: rgb(82, 124, 201);
+      }
+      tr:nth-of-type(odd) > td:nth-of-type(2) > a {
+        text-decoration: none;
+        color: rgb(54, 88, 8);
+      }
+      button {
+        color: rgb(54, 142, 158);
+        background-color: antiquewhite;
+        border: 0;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 10px;
+        font-weight: bolder;
+      }
+      img {
+        width: 50px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .nav {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2vh;
+      }
+      .nav > a {
+        text-decoration: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: rgb(196, 163, 120);
+      }
+      .text-right {
+        text-align: right;
+      }
+      .nav-header {
+        display: flex;
+        justify-content: end;
+        background-color: rgba(213, 221, 221, 0.5);
+        height: 5vh;
+        border-radius: 10px;
+        padding: 0 0 2vh 0;
+      }
+      .nav-header nav > a {
+        background-color: rgba(255, 228, 196, 0.7);
+        padding: 20px 50px;
+        margin: 0 20px;
+        text-decoration: none;
+        color: rgb(112, 112, 61);
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-right">
+      <div class="nav-header">
+        <nav>
+          <a href="../student/index.html">student</a>
+          <a href="../teacher/index.html">teacher</a>
+        </nav>
+      </div>
+      <h3>Teacher list</h3>
+      <div class="nav">
+        <a href="./creat.html">Add</a>
+      </div>
+
+      <table>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>mobile</th>
+          <th>pic</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="edit.html?id=1">Amy</a></td>
+          <td>0911-111-111</td>
+          <td><img src="https://picsum.photos/id/64/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=1"><button>修改</button></a>
+            <a href="./del.html?id=1"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="edit.html?id=2">Bob</a></td>
+          <td>0922-222-222</td>
+          <td><img src="https://picsum.photos/id/201/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=2"><button>修改</button></a>
+            <a href="./del.html?id=2"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="edit.html?id=3">Cat</a></td>
+          <td>0933-333-333</td>
+          <td><img src="https://picsum.photos/id/244/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=3"><button>修改</button></a>
+            <a href="./del.html?id=3"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="edit.html?id=4">Jason</a></td>
+          <td>0977-885-156</td>
+          <td><img src="https://picsum.photos/id/275/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=4"><button>修改</button></a>
+            <a href="./del.html?id=4"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="edit.html?id=5">Coney</a></td>
+          <td>0955-555-555</td>
+          <td><img src="https://picsum.photos/id/292/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=5"><button>修改</button></a>
+            <a href="./del.html?id=5"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><a href="edit.html?id=6">Ann</a></td>
+          <td>0966-666-666</td>
+          <td><img src="https://picsum.photos/id/357/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=6"><button>修改</button></a>
+            <a href="./del.html?id=6"><button>刪除</button></a>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><a href="edit.html?id=7">Roger</a></td>
+          <td>09777-777-777</td>
+          <td><img src="https://picsum.photos/id/371/100/100" alt="" /></td>
+          <td>
+            <a href="./edit.html?id=7"><button>修改</button></a>
+            <a href="./del.html?id=7"><button>刪除</button></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

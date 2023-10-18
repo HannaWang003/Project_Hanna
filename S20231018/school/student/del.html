@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student - Del</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 2px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      th {
+        height: 30px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+      }
+      th {
+        background-color: antiquewhite;
+        color: black;
+      }
+      tr:nth-child(2) {
+        background-color: rgb(209, 224, 228);
+        color: gray;
+        text-decoration: line-through red;
+      }
+      h3 {
+        text-align: center;
+        background-color: rgb(182, 238, 219);
+        padding: 20px 0;
+      }
+      input[type="submit"] {
+        margin-top: 2vh;
+        background-color: bisque;
+        padding: 15px;
+        color: rgb(218, 172, 22);
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 10px 5px 0px #d1e0e4;
+      }
+      .nav {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2vh;
+      }
+      .nav > a {
+        text-decoration: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: rgb(196, 163, 120);
+      }
+      .text-right {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-right">
+      <h3>Del</h3>
+      <div class="nav">
+        <a href="./index.html">back</a>
+      </div>
+      <form action="" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>mobile</th>
+            <th>pic</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>amy</td>
+            <td>0911-111-111</td>
+            <td><img src="https://picsum.photos/id/64/100/100" alt="" /></td>
+          </tr>
+          <tr>
+            <td colspan="4"><input type="submit" value="確定刪除" /></td>
+            <!-- <td>6</td> -->
+            <!-- <td>7</td> -->
+            <!-- <td>8</td> -->
+          </tr>
+          <tr></tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
