@@ -35,19 +35,20 @@
       }
       tr:nth-child(even) {
         background-color: rgb(170, 215, 226);
-        color: rgb(82, 124, 201);
+        background-color: rgb(214, 184, 138);
+        color: rgb(255, 255, 255);
       }
       tr:nth-of-type(odd) {
-        background-color: beige;
-        color: rgb(54, 88, 8);
+        background-color: rgb(240, 240, 233);
+        color: rgb(0, 0, 0);
       }
       tr:nth-of-type(even) > td:nth-of-type(2) > a {
         text-decoration: none;
-        color: rgb(82, 124, 201);
+        color: rgb(253, 253, 253);
       }
       tr:nth-of-type(odd) > td:nth-of-type(2) > a {
         text-decoration: none;
-        color: rgb(54, 88, 8);
+        color: rgb(0, 0, 0);
       }
       button {
         color: rgb(54, 142, 158);
@@ -75,6 +76,8 @@
         text-decoration: none;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         color: rgb(196, 163, 120);
+        background-color: antiquewhite;
+        padding: 10px;
       }
       .text-right {
         text-align: right;
@@ -101,13 +104,13 @@
     <div class="container text-right">
       <div class="nav-header">
         <nav>
-          <a href="../student/index.html">student</a>
-          <a href="../teacher/index.html">teacher</a>
+          <a href="../student/index.html?student">student</a>
+          <a href="../teacher/index.html?teacher">teacher</a>
         </nav>
       </div>
       <h3>Teacher list</h3>
       <div class="nav">
-        <a href="./creat.html">Add</a>
+        <a href="./creat.html?teacher">+</a>
       </div>
 
       <table>

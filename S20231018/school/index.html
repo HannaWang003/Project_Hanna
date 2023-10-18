@@ -7,18 +7,18 @@
     <style>
       h3 {
         text-align: center;
-        background-color: rgb(150, 142, 99);
-        padding: 20px;
-        color: bisque;
+        background-color: rgb(197, 196, 187);
+        padding: 20px 0;
+        color: rgb(252, 242, 230);
         width: 80vw;
         margin: 5vh auto;
       }
       footer {
         margin-top: 20px;
         text-align: center;
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        font-size: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 12px;
+        color: rgb(160, 156, 151);
       }
       .container {
         margin: auto;
@@ -32,8 +32,10 @@
         background-image: linear-gradient(
           90deg,
           rgb(214, 184, 138) 20%,
-          rgb(245, 245, 220) 20%,
-          rgb(245, 245, 220) 80%,
+          rgb(155, 147, 147) 20%,
+          rgb(245, 245, 220) 25%,
+          rgb(245, 245, 220) 75%,
+          rgb(155, 147, 147) 80%,
           rgb(214, 184, 138) 80%
         );
         width: 50vw;
@@ -62,8 +64,12 @@
     <h3>學校後端管理系統</h3>
     <div class="container">
       <div class="box">
-        <div class="inbox"><a href="./student/index.html">STUDENT</a></div>
-        <div class="inbox"><a href="./teacher/index.html">TEACHER</a></div>
+        <div class="inbox">
+          <a href="./student/index.html?student">STUDENT</a>
+        </div>
+        <div class="inbox">
+          <a href="./teacher/index.html?teacher">TEACHER</a>
+        </div>
       </div>
     </div>
     <footer>&copy;HannaWang 20231018-HW</footer>
