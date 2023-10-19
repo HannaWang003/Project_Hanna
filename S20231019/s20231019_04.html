@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(155, 82, 127);
+      }
+      .container > .box:nth-child(1) {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .container > .box:nth-child(2) {
+        width: 100px;
+        height: 100px;
+        background-color: azure;
+        padding: 20px;
+        border: 5px solid black;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pos-static {
+        left: 30px;
+      }
+      .pos-relative {
+        position: relative;
+        left: 30px;
+        font-size: 50px;
+        background-color: bisque;
+      }
+      .box-relative {
+        width: 800px;
+        height: 800px;
+        position: relative;
+        background-color: rgb(104, 134, 124);
+      }
+      .box-absolute {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+      .box1 {
+        top: 0;
+        left: 0;
+        background-color: pink;
+      }
+      .box2 {
+        top: 0;
+        right: 0;
+        background-color: rgb(146, 199, 60);
+      }
+      .box3 {
+        bottom: 0;
+        right: 0;
+        background-color: rgb(27, 75, 129);
+      }
+      .box4 {
+        bottom: 0;
+        left: 0;
+        background-color: rgb(243, 211, 106);
+      }
+      footer {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+      nav {
+        background-color: rgb(161, 125, 157);
+        width: 80vw;
+        height: 10vh;
+        position: sticky;
+        top: 100px;
+        margin: 0 10vw;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav></nav>
+      <h3>position</h3>
+      <br />
+      <hr />
+      <br />
+      <h4>static</h4>
+      <p class="pos-static">Lorem ipsum dolor sit amet consectetur.</p>
+      <br />
+      <hr />
+      <br />
+      <h4>relative</h4>
+      <p class="pos-relative">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sint eius
+        nemo soluta molestiae saepe doloribus esse culpa ad dolore recusandae
+        maxime veniam velit, sunt non ea odio exercitationem enim?
+      </p>
+      <br />
+      <hr />
+      <br />
+      <h4>obsolute</h4>
+      <div class="box-relative">
+        <div class="box-absolute box1"></div>
+        <div class="box-absolute box2"></div>
+        <div class="box-absolute box3"></div>
+        <div class="box-absolute box4"></div>
+      </div>
+    </div>
+    <footer>top</footer>
+  </body>
+</html>
