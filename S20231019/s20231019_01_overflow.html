@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 500px;
+        display: inline-block;
+        margin: 2vh 2vw;
+      }
+      .container .box:nth-child(1) {
+        background-color: bisque;
+        overflow: visible;
+      }
+      .container .box:nth-child(2) {
+        background-color: bisque;
+        overflow: hidden;
+      }
+      .container .box:nth-child(3) {
+        background-color: rgb(240, 159, 60);
+        overflow: scroll;
+      }
+      .container .box:nth-child(4) {
+        background-color: rgb(189, 126, 54);
+        overflow: auto;
+      }
+      .container .box:nth-child(5) {
+        background-color: rgb(145, 93, 33);
+        overflow-x: hidden;
+      }
+      p {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bolder;
+      }
+      iframe {
+        width: 50vw;
+        height: 50vh;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>visible</p>
+        <img src="https://picsum.photos/id/533/300" alt="" />
+      </div>
+      <div class="box">
+        <p>hidden</p>
+        <img src="https://picsum.photos/id/520/300" alt="" />
+      </div>
+      <div class="box">
+        <p>scroll</p>
+        <img src="https://picsum.photos/id/24/300" alt="" />
+      </div>
+      <div class="box">
+        <p>auto</p>
+        <img src="https://picsum.photos/id/777/300" alt="" />
+      </div>
+      <div class="box">
+        <p>overflow-x</p>
+        <img src="https://picsum.photos/id/900/300" alt="" />
+      </div>
+      <iframe src="https://mackliu.github.io/php-book/" frameborder="0">
+      </iframe>
+    </div>
+  </body>
+</html>
