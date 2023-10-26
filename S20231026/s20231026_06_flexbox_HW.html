@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>萬聖節活動</title>
+    <title>萬聖節cookie教學活動</title>
     <style>
       * {
         box-sizing: border-box;
@@ -58,11 +58,15 @@
         justify-content: space-around;
         align-items: center;
         background-color: rgb(89, 49, 124);
+        background-image: url(./img/03.png);
+        background-size: 30vw;
+        background-repeat: repeat-x;
+      background-position-Y: 1vh;
         z-index: 200;
       }
       #box2 {
         margin: auto;
-        margin-top: 5vh;
+        margin-top: 1vh;
         width: 75vw;
         height: 70vh;
         display: flex;
@@ -75,17 +79,24 @@
         width: 20vw;
         height: 50vh;
         text-align: center;
-        border-radius:15vw 15vw 0 0;
+        border-radius:2vw 0 0 2vw;
         background-color: rgba(214, 196, 255,0.5);
         padding-top: 10vh;
-        border-right:20px solid rgb(0, 0, 0);
-        /* border-top:20px solid black; */
+        border-top:20px solid rgb(0, 0, 0);
+        border-right:20px solid black;
         box-shadow: 0px 0px 100px black;
         filter: grayscale(100%);
       }
       .item1:hover {
         filter: grayscale(0);
-        box-shadow: 0px 0px 100px rgb(255, 255, 255);
+        box-shadow: -50px -50px 100px rgb(255, 255, 255);
+        border-top:0px;
+        border-right:0px;
+        border-left:20px solid rgb(211, 211, 211);
+        border-bottom:20px solid rgb(107, 23, 118);
+        border-radius:0 2vw 2vw 0;
+        transition-duration:1.5s;
+
       }
       .item2 {
         margin-right: 5px;
@@ -113,13 +124,56 @@
       img {
         width: 10vw;
       }
+      nav>img{
+        margin-top:5vh;
+      width:10vw;
+      }
+      nav>img:hover{
+        margin-top:30vh;
+        opacity:0;
+      width:50vw;
+      filter: grayscale(100%);
+      transition-duration:2s;
+      }
+      .back-top{
+      position:fixed;
+      bottom:5px;
+      right:30px;
+      z-index:300;
+        filter:drop-shadow(5px -5px white);
+      }
+      .back-top img:hover{
+      opacity:0.2;
+      transition-duration: 1.5s;
+      }
+      .p-fixed{
+      position:fixed;
+      width:5vw;
+      }
+      .gosht1{
+        bottom:0;
+      right:10px;
+      }
+      .gosht2{
+      bottom:30px;
+      right:8vw;
+      width:8vw;
+      z-index:400;
+      }
+      .gosht2:hover{
+      bottom:100px;
+      opacity:0;
+      transition-duration: 2s;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <nav>
+        <img src="./img/02.png" alt="">
         <a href="#box1">vedio</a>
         <a href="#box2">manual</a>
+        <img src="./img/01.png" alt="">
       </nav>
       <div id="box1">
         <div class="item1">
@@ -188,6 +242,13 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
       </div>
+    </div>
+    <div>
+      <a href="#"  class="back-top">
+        <img src="./img/04.png" alt="">
+      </a>
+<a href="#"><img class="p-fixed gosht1" src="./img/05.png" alt=""></a>
+<img class="p-fixed gosht2" src="./img/06.png" alt="">
     </div>
   </body>
 </html>
