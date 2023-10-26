@@ -17,13 +17,14 @@
         margin: auto;
         background-color: rgba(111, 97, 122, 0.637);
         width: 80vw;
-        /* height: 100vh; */
+        box-shadow: 0px 100px 20px black;
       }
       nav {
         width: 80vw;
         height: 10vh;
         background-color: rgb(61, 42, 73);
-        position: fixed;
+        position:sticky;
+        top:0;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -49,19 +50,19 @@
       }
       #box1 {
         margin: auto;
-        padding-top: 10vh;
+        padding-top:10vh;
         width: 75vw;
-        height: 80vh;
+        height: 70vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         background-color: rgb(89, 49, 124);
-        filter: drop-shadow(10px 10px 10px black);
+        z-index: 200;
       }
       #box2 {
-        margin-top: 100px;
         margin: auto;
+        margin-top: 5vh;
         width: 75vw;
         height: 70vh;
         display: flex;
@@ -69,7 +70,6 @@
         justify-content: space-around;
         align-items: center;
         background-color: rgb(214, 146, 58);
-        filter: drop-shadow(10px 10px 10px black);
       }
       .item1 {
         width: 20vw;
@@ -78,17 +78,21 @@
         border-radius:15vw 15vw 0 0;
         background-color: rgba(214, 196, 255,0.5);
         padding-top: 10vh;
+        border-right:20px solid rgb(0, 0, 0);
+        /* border-top:20px solid black; */
         box-shadow: 0px 0px 100px black;
-        /* filter: grayscale(100%); */
+        filter: grayscale(100%);
       }
       .item1:hover {
         filter: grayscale(0);
         box-shadow: 0px 0px 100px rgb(255, 255, 255);
       }
       .item2 {
-        margin-right: 10px;
-        margin-left: 10px;
-        padding: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
         width: 15vw;
         height: 30vh;
         background-color: rgb(255, 153, 0);
@@ -99,8 +103,8 @@
       .item2:hover {
         filter: grayscale(0);
         box-shadow: 0px 0px 50px rgb(226, 188, 62);
-        border: 5px lightgreen solid;
-        border-radius: 50px;
+        border: 10px lightgreen solid;
+        border-radius: 30px;
       }
       iframe {
         width: 15vw;
@@ -119,90 +123,59 @@
       </nav>
       <div id="box1">
         <div class="item1">
-          <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <p>Lorem, ipsum.</p>
+         <iframe src="https://www.youtube.com/embed/0u7LiC0PJlI?si=N1MG0KRbuHLoHQ4H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia debitis odio, placeat sit et sapiente officia impedit voluptate omnis. Ducimus.</p>
         </div>
         <div class="item1">
-          <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <p>Lorem, ipsum.</p>
+          <iframe src="https://www.youtube.com/embed/qW-DlU3NJqI?si=zuuQet6QFIYYCz-C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quia, qui molestiae nam earum iure.</p>
         </div>
         <div class="item1">
-          <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <p>Lorem, ipsum.</p>
+          <iframe src="https://www.youtube.com/embed/K-XT8BikgDk?si=NPU5dGnjCY3vQSVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio quam omnis adipisci sapiente, deleniti hic libero fuga ex quasi, modi officiis delectus officia aut.</p>
         </div>
       </div>
       <div id="box2">
         <div class="item2">
           <img src="./img/1.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/2.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/3.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/7.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/5.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/6.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
           <img src="./img/1.jpg" alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
         <div class="item2">
@@ -211,8 +184,7 @@
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
         </div>
       </div>
