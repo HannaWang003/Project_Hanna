@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin: auto;
+        padding: 5px;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(201, 228, 226);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .item {
+        /* margin:5px; */
+        width: 150px;
+        height: 150px;
+        background: rgb(243, 243, 243);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 100px;
+        color: white;
+      }
+      .bg-g {
+        background-color: rgb(94, 194, 94);
+        filter: drop-shadow(10px 10px 5px rgb(78, 78, 78));
+      }
+      .bg-g::before {
+        content: "O";
+        filter: drop-shadow(10px 10px 5px green);
+      }
+      .bg-r {
+        background-color: rgb(252, 118, 118);
+        filter: drop-shadow(10px 10px 5px rgb(78, 78, 78));
+      }
+      .bg-r::before {
+        content: "X";
+        filter: drop-shadow(10px 10px 5px red);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item bg-g"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item bg-g"></div>
+      <div class="item bg-r"></div>
+      <div class="item bg-r"></div>
+      <div class="item"></div>
+      <div class="item bg-g"></div>
+    </div>
+  </body>
+</html>

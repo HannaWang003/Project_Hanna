@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>萬聖節活動</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(./img/bg.jpg);
+        background-size: contain;
+        background-attachment: fixed;
+      }
+      .container {
+        margin: auto;
+        background-color: rgba(111, 97, 122, 0.637);
+        width: 80vw;
+        /* height: 100vh; */
+      }
+      nav {
+        width: 80vw;
+        height: 10vh;
+        background-color: rgb(61, 42, 73);
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100;
+        filter: drop-shadow(10px 10px 10px black);
+      }
+      nav > a {
+        display: inline-block;
+        width: 120px;
+        height: 60px;
+        color: rgb(218, 199, 191);
+        background-color: rgb(162, 149, 173);
+        font-size: 30px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 50px;
+      }
+      nav > a:hover {
+        background-color: rgb(0, 0, 0);
+      }
+      #box1 {
+        margin: auto;
+        padding-top: 10vh;
+        width: 75vw;
+        height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(89, 49, 124);
+        filter: drop-shadow(10px 10px 10px black);
+      }
+      #box2 {
+        margin-top: 100px;
+        margin: auto;
+        width: 75vw;
+        height: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(214, 146, 58);
+        filter: drop-shadow(10px 10px 10px black);
+      }
+      .item1 {
+        width: 15vw;
+        height: 40vh;
+        text-align: center;
+        background-color: rgb(214, 196, 255);
+        padding: 20px;
+        box-shadow: 0px 0px 100px black;
+        filter: grayscale(100%);
+      }
+      .item1:hover {
+        filter: grayscale(0);
+        box-shadow: 0px 0px 100px rgb(255, 255, 255);
+      }
+      .item2 {
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 20px;
+        width: 15vw;
+        height: 30vh;
+        background-color: rgb(255, 153, 0);
+        text-align: center;
+        box-shadow: 0px 0px 50px rgb(0, 0, 0);
+        filter: grayscale(100%);
+      }
+      .item2:hover {
+        filter: grayscale(0);
+        box-shadow: 0px 0px 50px rgb(226, 188, 62);
+        border: 5px lightgreen solid;
+        border-radius: 50px;
+      }
+      iframe {
+        width: 12vw;
+        filter: drop-shadow(10px 10px 10px rgb(132, 46, 158));
+      }
+      img {
+        width: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#box1">vedio</a>
+        <a href="#box2">manual</a>
+      </nav>
+      <div id="box1">
+        <div class="item1">
+          <iframe
+            width=""
+            height=""
+            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item1">
+          <iframe
+            width=""
+            height=""
+            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item1">
+          <iframe
+            width=""
+            height=""
+            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p>Lorem, ipsum.</p>
+        </div>
+      </div>
+      <div id="box2">
+        <div class="item2">
+          <img src="./img/1.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/2.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/3.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/7.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/5.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/6.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/1.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./img/2.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            itaque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
