@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin: auto;
+        width: 80vw;
+        height: 20vh;
+        background-color: rgb(243, 243, 243);
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background: rgb(137, 236, 231);
+        border: 1px lightgrey solid;
+      }
+      .o1 {
+        order: 4;
+      }
+      .o2 {
+        order: 2;
+      }
+      .o3 {
+        order: 3;
+      }
+      .o4 {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      This is container
+      <div class="item o1">item1</div>
+      <div class="item o2">item2</div>
+      <div class="item o3">item3</div>
+      <div class="item o4">item4</div>
+    </div>
+  </body>
+</html>
