@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <<<<<<< HEAD
     <title>萬聖節活動</title>
+    =======
+    <title>Hallowee cookief</title>
+    >>>>>>> 9b89f140e1789dced57fd67efe0784bdf116f218
     <style>
       * {
         box-sizing: border-box;
@@ -17,49 +21,56 @@
         margin: auto;
         background-color: rgba(111, 97, 122, 0.637);
         width: 80vw;
-        /* height: 100vh; */
+        box-shadow: 0px 100px 20px black;
       }
       nav {
         width: 80vw;
         height: 10vh;
         background-color: rgb(61, 42, 73);
-        position: fixed;
+        position: sticky;
+        top: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
         z-index: 100;
-        filter: drop-shadow(10px 10px 10px black);
+        filter: drop-shadow(20px 20px 10px black);
       }
       nav > a {
         display: inline-block;
-        width: 120px;
-        height: 60px;
+        width: 40vw;
+        height: 50px;
         color: rgb(218, 199, 191);
-        background-color: rgb(162, 149, 173);
         font-size: 30px;
         text-decoration: none;
         text-align: center;
-        line-height: 60px;
-        border-radius: 50px;
+        line-height: 50px;
       }
       nav > a:hover {
-        background-color: rgb(0, 0, 0);
+        width: 80vw;
+        height: 50px;
+        border-radius: 50px;
+        background-image: radial-gradient(rgba(82, 34, 90, 0.2), white);
+        transition-duration: 1s;
       }
       #box1 {
         margin: auto;
         padding-top: 10vh;
         width: 75vw;
-        height: 80vh;
+        height: 70vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         background-color: rgb(89, 49, 124);
-        filter: drop-shadow(10px 10px 10px black);
+        background-image: url(./img/03.png);
+        background-size: 30vw;
+        background-repeat: repeat-x;
+        background-position-y: 1vh;
+        z-index: 200;
       }
       #box2 {
-        margin-top: 100px;
         margin: auto;
+        margin-top: 1vh;
         width: 75vw;
         height: 70vh;
         display: flex;
@@ -67,25 +78,35 @@
         justify-content: space-around;
         align-items: center;
         background-color: rgb(214, 146, 58);
-        filter: drop-shadow(10px 10px 10px black);
       }
       .item1 {
-        width: 15vw;
-        height: 40vh;
+        width: 20vw;
+        height: 50vh;
         text-align: center;
-        background-color: rgb(214, 196, 255);
-        padding: 20px;
+        border-radius: 2vw 0 0 2vw;
+        background-color: rgba(214, 196, 255, 0.5);
+        padding-top: 10vh;
+        border-top: 20px solid rgb(0, 0, 0);
+        border-right: 20px solid black;
         box-shadow: 0px 0px 100px black;
         filter: grayscale(100%);
       }
       .item1:hover {
         filter: grayscale(0);
-        box-shadow: 0px 0px 100px rgb(255, 255, 255);
+        box-shadow: -50px -50px 100px rgb(255, 255, 255);
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 20px solid rgb(211, 211, 211);
+        border-bottom: 20px solid rgb(107, 23, 118);
+        border-radius: 0 2vw 2vw 0;
+        transition-duration: 1.5s;
       }
       .item2 {
-        margin-right: 10px;
-        margin-left: 10px;
-        padding: 20px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
         width: 15vw;
         height: 30vh;
         background-color: rgb(255, 153, 0);
@@ -96,120 +117,161 @@
       .item2:hover {
         filter: grayscale(0);
         box-shadow: 0px 0px 50px rgb(226, 188, 62);
-        border: 5px lightgreen solid;
-        border-radius: 50px;
+        border: 10px lightgreen solid;
+        border-radius: 30px;
       }
       iframe {
-        width: 12vw;
-        filter: drop-shadow(10px 10px 10px rgb(132, 46, 158));
+        width: 15vw;
+        filter: drop-shadow(0px 0px 50px rgb(58, 28, 67));
       }
       img {
         width: 10vw;
+      }
+      nav > img {
+        margin-top: 5vh;
+        width: 10vw;
+      }
+      nav > img:hover {
+        margin-top: 30vh;
+        opacity: 0;
+        width: 50vw;
+        filter: grayscale(100%);
+        transition-duration: 2s;
+      }
+      .back-top {
+        position: fixed;
+        bottom: 5px;
+        right: 30px;
+        z-index: 300;
+        filter: drop-shadow(5px -5px white);
+      }
+      .back-top img:hover {
+        opacity: 0.2;
+        transition-duration: 1.5s;
+      }
+      .p-fixed {
+        position: fixed;
+      }
+      .gosht1 {
+        bottom: 0;
+        right: 10px;
+        width: 5vw;
+      }
+      .gosht2 {
+        bottom: 30px;
+        right: 8vw;
+        width: 8vw;
+        z-index: 400;
+      }
+      .gosht2:hover {
+        width: 10vw;
+        bottom: 50px;
+        opacity: 0;
+        transition-duration: 1s;
+      }
+      .spider-w {
+        width: 20vw;
+        bottom: 0;
+        left: 0;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <nav>
+        <img src="./img/02.png" alt="" />
         <a href="#box1">vedio</a>
         <a href="#box2">manual</a>
+        <img src="./img/01.png" alt="" />
       </nav>
       <div id="box1">
         <div class="item1">
           <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            src="https://www.youtube.com/embed/0u7LiC0PJlI?si=N1MG0KRbuHLoHQ4H"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <p>Lorem, ipsum.</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+            debitis odio, placeat sit et sapiente officia impedit voluptate
+            omnis. Ducimus.
+          </p>
         </div>
         <div class="item1">
           <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            src="https://www.youtube.com/embed/qW-DlU3NJqI?si=zuuQet6QFIYYCz-C"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <p>Lorem, ipsum.</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+            quia, qui molestiae nam earum iure.
+          </p>
         </div>
         <div class="item1">
           <iframe
-            width=""
-            height=""
-            src="https://www.youtube.com/embed/MT2uBlQvdgA?si=EteMRzOB3ZSdTfHB"
+            src="https://www.youtube.com/embed/K-XT8BikgDk?si=NPU5dGnjCY3vQSVo"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <p>Lorem, ipsum.</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            optio quam omnis adipisci sapiente, deleniti hic libero fuga ex
+            quasi, modi officiis delectus officia aut.
+          </p>
         </div>
       </div>
       <div id="box2">
         <div class="item2">
           <img src="./img/1.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/2.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/3.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/7.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/5.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/6.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
           <img src="./img/1.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="item2">
-          <img src="./img/2.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            itaque.
-          </p>
+          <div class="imgBox">
+            <img src="./img/2.jpg" alt="" />
+          </div>
+
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
       </div>
+    </div>
+    <div>
+      <a href="#" class="back-top">
+        <img src="./img/04.png" alt="" />
+      </a>
+      <img class="p-fixed gosht1" src="./img/05.png" alt="" />
+      <img class="p-fixed gosht2" src="./img/06.png" alt="" />
+      <img src="./img/07.png" alt="" class="p-fixed spider-w" />
     </div>
   </body>
 </html>
