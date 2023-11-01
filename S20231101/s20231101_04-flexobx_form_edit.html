@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        margin: auto;
+        width: 80%;
+        height: 80vh;
+        /* background-color: lightcyan; */
+        display: flex;
+        justify-content: space-evenly;
+        align-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .item {
+        /* background: rgb(205, 231, 205); */
+        margin: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 8px solid rgb(48, 46, 46);
+        border-bottom: 3px solid rgb(61, 61, 61);
+        border-radius: 10px;
+      }
+      .w-20 {
+        width: 20%;
+      }
+      .w-50 {
+        width: 50%;
+      }
+      .h-10 {
+        height: 10%;
+      }
+      .h-30 {
+        height: 30%;
+      }
+
+      h3 {
+        text-align: center;
+      }
+      img {
+        height: 80%;
+      }
+      header {
+        margin: 2vh auto;
+        padding: 2vh;
+        background-color: lightseagreen;
+        width: 80vw;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h3>project</h3></header>
+
+    <div class="container">
+      <div class="item w-20 h-10">file name</div>
+      <div class="item w-50 h-10">poto</div>
+      <div class="item w-20 h-10">change</div>
+      <div class="item w-20 h-30">file name</div>
+      <div class="item w-50 h-30">
+        <img src="https://picsum.photos/id/586/300/300" alt="" />
+      </div>
+      <div class="item w-20 h-30">change</div>
+    </div>
+  </body>
+</html>
