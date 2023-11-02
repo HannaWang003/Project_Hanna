@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "標楷體";
 }
 .container {
   width: 1024px;
@@ -38,6 +39,25 @@ main {
   border: 1px solid lightseagreen;
   width: 100%;
   height: calc(100% - 25px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Maside-H > .box {
+  width: 200px;
+  height: 35px;
+  background-image: url(../images/menu1.png);
+  margin-top: 5px;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+}
+.Maside-H > p {
+  font-weight: 500;
+  font-size: 24px;
+  color: #ff00ff;
 }
 .Maside-F {
   /* background-color: rgb(206, 92, 92); */
@@ -46,7 +66,6 @@ main {
   height: 25px;
 }
 .Maside-F > p {
-  font-family: "標楷體";
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -68,7 +87,6 @@ main {
   font-size: 24px;
   color: #0000ff;
   line-height: 29px;
-  font-family: "標楷體";
 }
 .Mmain-F {
   /* background-color: rgb(18, 88, 18); */
