@@ -54,6 +54,9 @@ main {
   color: #000000;
   font-size: 16px;
 }
+.Maside-H > .box a {
+  text-decoration: none;
+}
 .Maside-H > .box:hover {
   background-image: url(../images/menu2.png);
 }
@@ -165,7 +168,16 @@ footer {
   width: 100%;
   color: #800000;
 }
-
+.guitar_learning > a {
+  display: block;
+  color: black;
+  margin-top: 50px;
+  /* background-color: #00ff00; */
+  text-align: center;
+}
+.guitar-learning a:hover {
+  color: aquamarine;
+}
 #date1 {
   color: #0000ff;
 }
@@ -177,4 +189,8 @@ footer {
 }
 #date4 {
   color: #000000;
+}
+.bblank {
+  width: 100%;
+  height: 500px;
 }
