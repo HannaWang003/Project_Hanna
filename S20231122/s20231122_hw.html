@@ -27,22 +27,35 @@
   <style>
     * {
     }
+    body{
+    /* background-image:url(./images/bg.jpg); */
+    }
     .self-brand-a {
       font-size: 5vh;
       font-family: "Oi", sans-serif;
     }
+    .self-navbar-nav{
+      width: 100%;
+    display: flex;
+    justify-content: space-around;}
     .card img {
       width: 100px;
       height: 100px;
     }
     .self-card {
-      background-color: rgba(203, 203, 203, 0.453);
-      box-shadow: 50px 50px 0px rgb(4, 4, 4);
-      /* backdrop-filter: blur(50px); */
+      /* background-color: rgba(203, 203, 203, 0.453); */
+border:0;
+    }
+    .self-collapse-end{
+      background-image:url(./images/hippo_footer.png);
+      height:300px;
+      background-size:contain;background-repeat:no-repeat;
+      background-position:right 0;
     }
   </style>
   <body>
     <div class="container">
+      <!-- navbar-start -->
       <div class="row m-auto mb-3 sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -60,7 +73,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav self-navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
                     >News</a
@@ -113,7 +126,8 @@
           </div>
         </nav>
       </div>
-      <div class="row m-auto mb-3" style="box-shadow: 50px 50px 0 black">
+      <!-- carousal-start -->
+      <div class="row m-auto mb-3">
         <div
           id="carouselExampleCaptions"
           class="carousel slide"
@@ -144,10 +158,9 @@
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
               <img
-                src="https://picsum.photos/id/42/200/300"
+                src="./images/elephant.jpg"
                 class="d-block w-100"
                 alt="..."
-                style="height: 80vh"
               />
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
@@ -158,10 +171,9 @@
             </div>
             <div class="carousel-item" data-bs-interval="3000">
               <img
-                src="https://picsum.photos/id/45/200/300"
-                class="d-block w-100 vh-50"
+                src="./images/hippo.jpg"
+                class="d-block w-100"
                 alt="..."
-                style="height: 80vh"
               />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
@@ -172,10 +184,9 @@
             </div>
             <div class="carousel-item" data-bs-interval="3000">
               <img
-                src="https://picsum.photos/id/48/200/300"
-                class="d-block w-100 vh-50"
+                src="./images/lion.jpg"
+                class="d-block w-100"
                 alt="..."
-                style="height: 80vh"
               />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
@@ -205,43 +216,12 @@
           </button>
         </div>
       </div>
+      <!-- card-start -->
       <div class="row mb-3 justify-content-center">
         <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
           <img
-            class="bg-info p-3 m-auto my-3 rounded-circle"
-            src="./images/animal-4.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text text-start">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-info">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
-          <img
-            class="bg-warning p-3 m-auto my-3 rounded-circle"
-            src="./images/animal-2.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text text-start">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-warning">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
-          <img
             class="bg-light p-3 m-auto my-3 rounded-circle"
-            src="./images/animal-3.png"
+            src="./images/animal-1.png"
             class="card-img-top"
             alt="..."
           />
@@ -254,11 +234,47 @@
             <a href="#" class="btn btn-light">Go somewhere</a>
           </div>
         </div>
+        <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
+          <img
+            class="bg-light p-3 m-auto my-3 rounded-circle"
+            src="./images/animal-1-1.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text text-start">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-light">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
+          <img
+            class="bg-warning p-3 m-auto my-3 rounded-circle"
+            src="./images/animal-3.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text text-start">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-warning">Go somewhere</a>
+          </div>
+        </div>
       </div>
-      <div class="row m-auto mb-3">
+      <!-- collapse-start -->
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12 col-sm-8 d-flex flex-column bg-warning">
+      <div class="m-auto mb-3">
         <p class="d-inline-flex gap-1">
           <a
-            class="btn btn-primary"
+            class="btn btn-success"
             data-bs-toggle="collapse"
             href="#collapseExample1"
             role="button"
@@ -268,7 +284,7 @@
             collapseExample_1
           </a>
           <button
-            class="btn btn-primary"
+            class="btn btn-success"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseExample2"
@@ -299,10 +315,10 @@
           </div>
         </div>
       </div>
-      <div class="row m-auto mb-3">
+      <div class="m-auto mb-3">
         <p class="d-inline-flex gap-1">
           <a
-            class="btn btn-primary"
+            class="btn btn-success"
             data-bs-toggle="collapse"
             href="#collapseExample3"
             role="button"
@@ -312,7 +328,7 @@
             collapseExample_1
           </a>
           <button
-            class="btn btn-primary"
+            class="btn btn-success"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseExample4"
@@ -343,6 +359,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-12 col-sm-4 self-collapse-end bg-light"></div>
+
+    </div>
+    </div>
     </div>
   </body>
 </html>
