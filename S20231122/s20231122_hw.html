@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoo</title>
+    <link rel="icon" href="./images/banner_icon.svg" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,6 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oi" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -26,13 +28,20 @@
   </head>
   <style>
     * {
+      font-family:"Josefin Sans", sans-serif;
+      font-weight:bolder;
     }
     body{
-    /* background-image:url(./images/bg.jpg); */
+    background-image:url(./images/bg.png);
+    background-repeat:no-repeat;
+    background-size:500px;
+    background-position: top 0 left 0;
+    background-attachment: fixed;
     }
     .self-brand-a {
       font-size: 5vh;
       font-family: "Oi", sans-serif;
+      font-weight:100;
     }
     .self-navbar-nav{
       width: 100%;
@@ -57,7 +66,7 @@ border:0;
     <div class="container">
       <!-- navbar-start -->
       <div class="row m-auto mb-3 sticky-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg rounded-3 shadow-sm" style="backdrop-filter: blur(100px);">
           <div class="container-fluid">
             <i class="fa-solid fa-otter fa-2xl"></i>
             <a class="navbar-brand self-brand-a" href="#">Zoo</a>
@@ -107,12 +116,13 @@ border:0;
                 </li>
                 <div class="dropdown">
                   <button
-                    class="btn btn-secondary dropdown-toggle"
+                    class="btn btn-warning dropdown-toggle opacity-75"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Setting
+                    <i class="fa-solid fa-arrow-up-right-dots fa-lg"></i>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">中文版</a></li>
@@ -202,7 +212,9 @@ border:0;
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+              
+            </span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button
@@ -226,7 +238,7 @@ border:0;
             alt="..."
           />
           <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Australian Animal Area</h5>
             <p class="card-text text-start">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -242,7 +254,7 @@ border:0;
             alt="..."
           />
           <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Amphibian and Reptile House</h5>
             <p class="card-text text-start">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -258,7 +270,7 @@ border:0;
             alt="..."
           />
           <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">African Animal Area</h5>
             <p class="card-text text-start">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -267,54 +279,14 @@ border:0;
           </div>
         </div>
       </div>
-      <!-- collapse-start -->
+      <!-- collapse-start-1 -->
       <div class="container mb-5">
-        <div class="row">
-          <div class="col-12 col-sm-8 d-flex flex-column bg-warning">
+        <div class="row bg-light">
+          <div class="col-12 col-sm-8 d-flex flex-column justify-content-center bg-warning">
       <div class="my-5">
         <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
           <a
-            class="btn btn-success col-12 col-sm-4"
-            data-bs-toggle="collapse"
-            href="#collapseExample1"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample1"
-          >
-            collapseExample_1
-          </a>
-          <button
-            class="btn btn-success col-12 col-sm-8"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseExample2"
-            aria-expanded="false"
-            aria-controls="collapseExample2"
-          >
-            collapseExample_2
-          </button>
-        </p>
-        <div class="row">
-          <div class="collapse col-12 col-sm-4" id="collapseExample1">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
-            </div>
-          </div>
-          <div class="collapse col-12 col-sm-8" id="collapseExample2">
-            <div class="card card-body">
-              2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit
-              earum ad! Quasi, asperiores voluptatibus? Sunt dolorum officiis
-              accusamus obcaecati dolores corporis, consectetur atque natus
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mb-5">
-        <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
-          <a
-            class="btn btn-success col-12 col-sm-8"
+            class="btn btn-success col-12 col-sm-8 text-warning"
             data-bs-toggle="collapse"
             href="#collapseExample3"
             role="button"
@@ -324,7 +296,7 @@ border:0;
             collapseExample_1
           </a>
           <button
-            class="btn btn-success col-12 col-sm-4"
+            class="btn btn-success col-12 col-sm-4 text-warning"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseExample4"
@@ -356,6 +328,52 @@ border:0;
 
     </div>
     </div>
+    <!-- collapse-start-2 -->
+    <div class="container bg-body-tertiary shadow-sm p-3 rounded-3 border">
+    <div class="mt-2">
+      <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
+        <a
+          class="btn btn-warning col-12 col-sm-4 text-dark"
+          data-bs-toggle="collapse"
+          href="#collapseExample1"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample1"
+        >
+        traffic information&nbsp;&nbsp;
+        <i class="fa-solid fa-car fa-lg"></i>
+        </a>
+        <button
+          class="btn btn-warning col-12 col-sm-8 text-dark "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample2"
+          aria-expanded="false"
+          aria-controls="collapseExample2"
+        >
+        location&nbsp;&nbsp;
+        <i class="fa-solid fa-map-location-dot fa-lg"></i>
+        </button>
+      </p>
+      <div class="row">
+        <div class="collapse col-12 col-sm-4" id="collapseExample1">
+          <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is
+            hidden by default but revealed when the user activates the
+            relevant trigger.
+          </div>
+        </div>
+        <div class="collapse col-12 col-sm-8" id="collapseExample2">
+          <div class="card card-body">
+            2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit
+            earum ad! Quasi, asperiores voluptatibus? Sunt dolorum officiis
+            accusamus obcaecati dolores corporis, consectetur atque natus
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <p class="text-center mt-2"><i class="fa-solid fa-copyright"></i> 03 - HannaWang - 2023-11-24</p>
     </div>
   </body>
 </html>
