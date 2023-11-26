@@ -16,9 +16,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oi" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans" />
-    <link
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Fredericka+the+Great&family=Rubik+Moonrocks&display=swap" rel="stylesheet">    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -28,7 +26,7 @@
   </head>
   <style>
     * {
-      font-family:"Josefin Sans", sans-serif;
+      font-family:"Aclonica", sans-serif;
       font-weight:bolder;
     }
     body{
@@ -40,7 +38,7 @@
     }
     .self-brand-a {
       font-size: 5vh;
-      font-family: "Oi", sans-serif;
+      font-family: "Rubik Moonrocks", sans-serif;
       font-weight:100;
     }
     .self-navbar-nav{
@@ -50,6 +48,9 @@
     .card img {
       width: 100px;
       height: 100px;
+    }
+    .self-navbar-nav a{
+      font-family:"Fredericka the Great", sans-serif;
     }
     .self-card {
       /* background-color: rgba(203, 203, 203, 0.453); */
@@ -84,15 +85,15 @@ border:0;
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav self-navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="#news"
                     >News</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Visit the Zoo</a>
+                  <a class="nav-link" href="#visit_zoo">Visit the Zoo</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Display Area</a>
+                  <a class="nav-link" href="#display_area">Display Area</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -110,7 +111,7 @@ border:0;
                       <a class="dropdown-item" href="#">Organization</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Contact us</a>
+                      <a class="dropdown-item" href="#contact_us">Contact us</a>
                     </li>
                   </ul>
                 </li>
@@ -228,7 +229,37 @@ border:0;
           </button>
         </div>
       </div>
+      <!-- list_group-start -->
+      <div id="news" style="height:12vh"></div>
+      <h3>NEWS</h3>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small>And some small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-body-secondary">3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-body-secondary">And some muted small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-body-secondary">3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-body-secondary">And some muted small print.</small>
+        </a>
+      </div>
       <!-- card-start -->
+      <div id="visit_zoo" style="height:10vh"></div>
       <div class="row mb-3 justify-content-center">
         <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
           <img
@@ -280,6 +311,8 @@ border:0;
         </div>
       </div>
       <!-- collapse-start-1 -->
+      <div id="display_area" style="height:10vh"></div>
+
       <div class="container mb-5">
         <div class="row bg-light">
           <div class="col-12 col-sm-8 d-flex flex-column justify-content-center bg-warning">
@@ -329,6 +362,7 @@ border:0;
     </div>
     </div>
     <!-- collapse-start-2 -->
+    <div id="contact_us" style="height:10vh"></div>
     <div class="container bg-body-tertiary shadow-sm p-3 rounded-3 border">
     <div class="mt-2">
       <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
@@ -371,6 +405,16 @@ border:0;
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div style="height:10vh"></div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
     </div>
   </div>
     <p class="text-center mt-2"><i class="fa-solid fa-copyright"></i> 03 - HannaWang - 2023-11-24</p>
