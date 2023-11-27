@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoo</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./images/banner_icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./images/banner_icon.svg" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +17,11 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Changa+One&family=Rammetto+One&display=swap" rel="stylesheet">    <link
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Changa+One&family=Rammetto+One&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -25,14 +29,21 @@
       referrerpolicy="no-referrer"
     />
   </head>
-    <body>
+  <body>
     <div class="container">
       <!-- navbar-start -->
       <div class="row m-auto mb-3 sticky-top">
-        <nav class="navbar navbar-expand-lg rounded-3 shadow-sm border border-secondar bg-light">
+        <nav
+          class="navbar navbar-expand-lg rounded-3 shadow-sm border border-secondar bg-light"
+        >
           <div class="container-fluid">
             <i class="fa-solid fa-otter fa-2xl"></i>
-            <a class="navbar-brand text-warning self-brand-a" href="#" style="font-size:3rem;">ZoO</a>
+            <a
+              class="navbar-brand text-light self-brand-a"
+              href="#"
+              style="font-size: 3rem"
+              >ZoO</a
+            >
             <button
               class="navbar-toggler"
               type="button"
@@ -44,7 +55,11 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-size:1.2rem;color:black">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNavDropdown"
+              style="font-size: 1.2rem; color: black"
+            >
               <ul class="navbar-nav self-navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#news"
@@ -143,11 +158,7 @@
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img
-                src="./images/hippo.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
+              <img src="./images/hippo.jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -156,11 +167,7 @@
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img
-                src="./images/lion.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
+              <img src="./images/lion.jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -175,9 +182,7 @@
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true">
-              
-            </span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button
@@ -192,10 +197,14 @@
         </div>
       </div>
       <!-- list_group-start -->
-      <div id="news" style="height:15vh"></div>
+      <div id="news" style="height: 15vh"></div>
       <h3>NEWS</h3>
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action active bg-success"
+          aria-current="true"
+        >
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">List group item heading</h5>
             <small>3 days ago</small>
@@ -221,7 +230,7 @@
         </a>
       </div>
       <!-- card-start -->
-      <div id="visit_zoo" style="height:15vh"></div>
+      <div id="visit_zoo" style="height: 15vh"></div>
       <div class="row mb-3 justify-content-center">
         <div class="card col-sm col-12 m-3 self-card" style="width: 18rem">
           <img
@@ -273,146 +282,203 @@
         </div>
       </div>
       <!-- collapse-start-1 -->
-      <div id="display_area" style="height:15vh"></div>
+      <div id="display_area" style="height: 15vh"></div>
 
       <div class="container mb-5">
         <div class="row bg-light">
-          <div class="col-12 col-sm-8 d-flex flex-column justify-content-center bg-warning">
-      <div class="my-5">
-        <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
-          <a
-            class="btn btn-success col-12 col-sm-8 text-warning"
-            data-bs-toggle="collapse"
-            href="#collapseExample3"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample3"
+          <div
+            class="col-12 col-sm-8 d-flex flex-column justify-content-center bg-warning"
           >
-            collapseExample_1
-          </a>
-          <button
-            class="btn btn-success col-12 col-sm-4 text-warning"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseExample4"
-            aria-expanded="false"
-            aria-controls="collapseExample4"
-          >
-            collapseExample_2
-          </button>
-        </p>
-        <div class="row">
-          <div class="collapse col-12 col-sm-8" id="collapseExample3">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
+            <div class="my-5">
+              <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
+                <a
+                  class="btn btn-success col-12 col-sm-8 text-warning"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample3"
+                >
+                  collapseExample_1
+                </a>
+                <button
+                  class="btn btn-success col-12 col-sm-4 text-warning"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample4"
+                  aria-expanded="false"
+                  aria-controls="collapseExample4"
+                >
+                  collapseExample_2
+                </button>
+              </p>
+              <div class="row">
+                <div class="collapse col-12 col-sm-8" id="collapseExample3">
+                  <div class="card card-body">
+                    Some placeholder content for the collapse component. This
+                    panel is hidden by default but revealed when the user
+                    activates the relevant trigger.
+                  </div>
+                </div>
+                <div class="collapse col-12 col-sm-4" id="collapseExample4">
+                  <div class="card card-body">
+                    2-Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aut sit earum ad! Quasi, asperiores voluptatibus? Sunt
+                    dolorum officiis accusamus obcaecati dolores corporis,
+                    consectetur atque natus
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="collapse col-12 col-sm-4" id="collapseExample4">
-            <div class="card card-body">
-              2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit
-              earum ad! Quasi, asperiores voluptatibus? Sunt dolorum officiis
-              accusamus obcaecati dolores corporis, consectetur atque natus
+          <div class="col-12 col-sm-4 self-collapse-end bg-light"></div>
+        </div>
+      </div>
+      <!-- collapse-start-2 -->
+      <div id="contact_us" style="height: 15vh"></div>
+      <div class="container bg-body-tertiary shadow-sm p-3 rounded-3 border">
+        <div class="mt-2">
+          <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
+            <a
+              class="btn btn-warning col-12 col-sm-4 text-dark"
+              data-bs-toggle="collapse"
+              href="#collapseExample1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample1"
+            >
+              traffic information&nbsp;&nbsp;
+              <i class="fa-solid fa-car fa-lg"></i>
+            </a>
+            <button
+              class="btn btn-warning col-12 col-sm-8 text-dark"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample2"
+              aria-expanded="false"
+              aria-controls="collapseExample2"
+            >
+              location&nbsp;&nbsp;
+              <i class="fa-solid fa-map-location-dot fa-lg"></i>
+            </button>
+          </p>
+          <div class="row">
+            <div class="collapse col-12 col-sm-4" id="collapseExample1">
+              <div class="card card-body">
+                Some placeholder content for the collapse component. This panel
+                is hidden by default but revealed when the user activates the
+                relevant trigger.
+              </div>
+            </div>
+            <div class="collapse col-12 col-sm-8" id="collapseExample2">
+              <div class="card card-body">
+                2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                sit earum ad! Quasi, asperiores voluptatibus? Sunt dolorum
+                officiis accusamus obcaecati dolores corporis, consectetur atque
+                natus
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-12 col-sm-4 self-collapse-end bg-light"></div>
-
-    </div>
-    </div>
-    <!-- collapse-start-2 -->
-    <div id="contact_us" style="height:15vh"></div>
-    <div class="container bg-body-tertiary shadow-sm p-3 rounded-3 border">
-    <div class="mt-2">
-      <p class="col-12 d-inline-flex flex-wrap flex-sm-nowrap gap-1">
-        <a
-          class="btn btn-warning col-12 col-sm-4 text-dark"
-          data-bs-toggle="collapse"
-          href="#collapseExample1"
-          role="button"
-          aria-expanded="false"
-          aria-controls="collapseExample1"
-        >
-        traffic information&nbsp;&nbsp;
-        <i class="fa-solid fa-car fa-lg"></i>
-        </a>
-        <button
-          class="btn btn-warning col-12 col-sm-8 text-dark "
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseExample2"
-          aria-expanded="false"
-          aria-controls="collapseExample2"
-        >
-        location&nbsp;&nbsp;
-        <i class="fa-solid fa-map-location-dot fa-lg"></i>
-        </button>
-      </p>
+      <div style="height: 5vh"></div>
       <div class="row">
-        <div class="collapse col-12 col-sm-4" id="collapseExample1">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is
-            hidden by default but revealed when the user activates the
-            relevant trigger.
+        <!-- card-1 -->
+        <div
+          class="card m-auto my-1 col-sm col-12"
+          style="
+            width: 18rem;
+            border: 0px;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+          "
+        >
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary text-center">
+              Card subtitle
+            </h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-        <div class="collapse col-12 col-sm-8" id="collapseExample2">
-          <div class="card card-body">
-            2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit
-            earum ad! Quasi, asperiores voluptatibus? Sunt dolorum officiis
-            accusamus obcaecati dolores corporis, consectetur atque natus
+        <!-- card-2 -->
+        <div
+          class="card m-auto my-1 col-sm col-12 mx-sm-1"
+          style="
+            width: 18rem;
+            border: 0px;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+          "
+        >
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary text-center">
+              Card subtitle
+            </h6>
+            <p class="card-text fs-6">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a hef="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div
+          class="card m-auto my-1 col-sm col-12 mx-sm-1"
+          style="
+            width: 18rem;
+            border: 0px;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+          "
+        >
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary text-center">
+              Card subtitle
+            </h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <!-- card-4-->
+        <div
+          class="card m-auto my-1 col-sm col-12"
+          style="
+            width: 18rem;
+            border: 0px;
+            background-color: transparent;
+            backdrop-filter: blur(2px);
+          "
+        >
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary text-center">
+              Card subtitle
+            </h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div style="height:5vh"></div>
-  <div class="row">
-    <!-- card-1 -->
-  <div class="card m-auto my-1 col-sm col-12" style="width: 18rem;border:0px;background-color:transparent;backdrop-filter:blur(20px);">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary text-center">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <!-- card-2 -->
-  <div class="card m-auto my-1 col-sm col-12 mx-sm-1" style="width: 18rem;border:0px;background-color:transparent;backdrop-filter:blur(20px);">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary text-center">Card subtitle</h6>
-      <p class="card-text fs-6">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a hef="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <!-- card-3 -->
-  <div class="card m-auto my-1 col-sm col-12 mx-sm-1" style="width: 18rem;border:0px;background-color:transparent;backdrop-filter:blur(20px);">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary text-center">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <!-- card-4-->
-  <div class="card m-auto my-1 col-sm col-12" style="width: 18rem;border:0px;background-color:transparent;backdrop-filter:blur(2px);">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary text-center">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-</div>
-    <p class="text-center mt-2"><i class="fa-solid fa-copyright"></i> 03 - HannaWang - 2023-11-24</p>
+      <p class="text-center mt-2">
+        <i class="fa-solid fa-copyright"></i> 03 - HannaWang - 2023-11-24
+      </p>
     </div>
   </body>
 </html>
