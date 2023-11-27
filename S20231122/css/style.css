@@ -5,7 +5,7 @@
 body {
   background-image: url(../images/bg.png), url(../images/bg-1.png);
   background-repeat: no-repeat;
-  background-size: 300px;
+  background-size: 400px;
   background-position: top left, bottom right;
   background-attachment: fixed;
 }

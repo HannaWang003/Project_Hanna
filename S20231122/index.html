@@ -29,20 +29,28 @@
       referrerpolicy="no-referrer"
     />
   </head>
+  <style>
+    .nav-link{
+    color:rgba(0, 255, 0, 0.481);
+    }
+    .nav-link:hover{
+    color:rgb(1, 91, 1);
+    }
+  </style>
   <body>
     <div class="container">
       <!-- navbar-start -->
       <div class="row m-auto mb-3 sticky-top">
         <nav
-          class="navbar navbar-expand-lg rounded-3 shadow-sm border border-secondar bg-light"
+          class="navbar navbar-expand-lg rounded-2 shadow-sm bg-success bg-gradient"
         >
           <div class="container-fluid">
-            <i class="fa-solid fa-otter fa-2xl"></i>
+            
             <a
               class="navbar-brand text-light self-brand-a"
               href="#"
               style="font-size: 3rem"
-              >ZoO</a
+              ><i class="fa-solid fa-otter fa-sm text-light"></i>&nbsp;ZoO</a
             >
             <button
               class="navbar-toggler"
@@ -62,7 +70,7 @@
             >
               <ul class="navbar-nav self-navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#news"
+                  <a class="nav-link" aria-current="page" href="#news"
                     >News</a
                   >
                 </li>
@@ -74,7 +82,7 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle  active"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -111,7 +119,7 @@
                 </div> -->
                 <!-- offcanvas_start -->
                 <button
-                  class="btn btn-warning dropdown-toggle opacity-75"
+                  class="btn btn-warning dropdown-toggle shadow-sm"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasWithBothOptions"
@@ -715,7 +723,7 @@
         ></button>
       </div>
       <div class="offcanvas-body">
-        <div class="col-12 bg-info p-3 rounded-3 text-center mb-3">
+        <div class="col-12 bg-success bg-opacity-50 p-3 rounded-3 text-center mb-3">
           <a
             class="text-decoration-none text-light"
             style="font-family: Microsoft JhengHei; font-weight: bolder"
@@ -723,7 +731,7 @@
             >中文版</a
           >
         </div>
-        <div class="col-12 bg-info p-3 rounded-3 text-center">
+        <div class="col-12 bg-success p-3 rounded-3 text-center">
           <a class="text-decoration-none text-light" href="#contact_us"
             >Contact Us</a
           >
