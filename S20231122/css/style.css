@@ -9,7 +9,13 @@ body {
   background-position: bottom right;
   background-attachment: fixed;
 }
-
+.myoff-bg {
+  background-image: url(../images/bg-3-3.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  background-attachment: fixed;
+}
 .self-brand-a {
   font-size: 2rem;
   font-family: "Luckiest Guy", sans-serif;
