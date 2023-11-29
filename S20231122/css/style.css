@@ -3,10 +3,10 @@
   /* font-weight:bolder; */
 }
 body {
-  background-image:url(../images/bg.png),url(../images/bg-1.png);
+  background-image: url(../images/bg.png), url(../images/bg-1.png);
   background-repeat: no-repeat;
   background-size: 35vh;
-  background-position: top 10vh left, bottom right;
+  background-position: top 8vh left, bottom right;
   background-attachment: fixed;
 }
 .self-brand-a {
