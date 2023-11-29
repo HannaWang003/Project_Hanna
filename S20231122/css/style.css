@@ -45,3 +45,6 @@ body {
   background-repeat: no-repeat;
   background-position: right 0;
 }
+.bg-transparent {
+  background-color: transparent;
+}
