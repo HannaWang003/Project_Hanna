@@ -43,7 +43,7 @@ body {
   height: 300px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: left 0;
 }
 .bg-transparent {
   background-color: transparent;
