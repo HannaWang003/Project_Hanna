@@ -48,8 +48,7 @@
       </table>
     </div>
     <script>
-      myBtn.addEventListener("click", function () {
-        let searchText = word.value;
+      function openSearch(searchText) {
         window.open("https://www.merriam-webster.com/dictionary/" + searchText);
         window.open(
           "https://www.oxfordlearnersdictionaries.com/definition/english/" +
@@ -63,6 +62,10 @@
             searchText +
             "&sca_esv=588643820&hl=zh_TW&tbm=isch&sxsrf=AM9HkKlx3bW8wfvaH1W3qKVbP5MFqoVKcA:1701933444893&source=lnms&sa=X&ved=2ahUKEwi63KeT5PyCAxUls1YBHSuyCtkQ_AUoAXoECAIQAw&biw=1920&bih=931&dpr=1"
         );
+      }
+      myBtn.addEventListener("click", function () {
+        let searchText = word.value;
+        openSearch(searchText);
       });
     </script>
   </body>
