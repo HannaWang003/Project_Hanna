@@ -33,19 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <td id="word">apple</td>
-            <td><button class="btn btn-primary" id="myBtn">myBtn</button></td>
+            <td>
+              <input
+                id="wordaa"
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </td>
+            <td><button class="btn btn-primary" id="myBtn">search</button></td>
           </tr>
         </tbody>
       </table>
     </div>
     <script>
       // 綁定
-      let myBtn = document.getElementById("myBtn");
-      let Word = document.getElementById("word");
-
       myBtn.addEventListener("click", function () {
-        window.open("https://www.merriam-webster.com/dictionary/" + Word);
+        let searchText = wordaa.value;
+        window.open("https://www.merriam-webster.com/dictionary/" + searchText);
       });
     </script>
   </body>
