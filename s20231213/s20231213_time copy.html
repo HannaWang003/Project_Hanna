@@ -18,8 +18,8 @@
   </head>
   <style>
     .light {
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       background: ghostwhite;
       box-shadow: inset -5px 20px 0px rgb(0, 0, 0);
@@ -29,9 +29,9 @@
       width: 50px;
       height: 50px;
       border-radius: 25px 25px 0 0;
-      background: rgb(226, 226, 226);
+      background: rgb(0, 0, 0);
       position: absolute;
-      box-shadow: inset 0px 0px 20px rgb(7, 7, 7);
+      box-shadow: inset -20px 0px 10px rgb(95, 95, 95);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -56,9 +56,9 @@
 left:50%;
 }
 100%{
-bottom:0px;
-left:0px;
-transform: scale(0.02);
+bottom:35%;
+left:36%;
+transform: scale(0.08);
 }
     }
     .img{
@@ -68,50 +68,50 @@ transform: scale(0.02);
       animation: move ease-in 10s;
     }
   </style>
-  <body
-    class="bg-info bg-opacity-10"
-    style="box-shadow: inset 0 0 50px lightblue; padding: 50px;position:realtive;"
-  >
-    <div class="container mt-5">
-      <div class="row align-items-center">
+  <body>
+    <div class="container mt-2">
+      <div class="row">
         <div
-          class="col-6 d-flex p-5 rounded-5 bg-success bg-opacity-10 shadow-lg border border-dark"
-        >
+          class="col-6 d-flex p-5 rounded-5 bg-success bg-opacity-10 shadow-lg border border-dark">
           <div id="Light1" class="light"></div>
           <div id="Light2" class="light mx-2"></div>
           <div id="Light3" class="light"></div>
         </div>
-        <div id="Btn" class="col">
-          <div class="btn btn-dark p-5">button</div>
+        <div id="Btn" class="col-6">
+          <div class="btn btn-dark p-3">button</div>
         </div>
       </div>
     </div>
     <div id="car-middle" class="car-middle"></div>
     <div
       id="road"
-      class="container-fluid fixed-bottom"
+      class="container-fluid"
       style="
-        border-bottom: 50vh solid rgb(32, 32, 29);
-        border-left: 25vw solid transparent;
-        border-right: 25vw solid transparent;
+        border-bottom: 50vh solid rgb(59, 59, 59);
+        border-left: 30vw solid transparent;
+        border-right: 30vw solid transparent;
+        width: 30vw;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translate(-50%,0%);
+        z-index:1;">        
+        </div>
+        <div
+        style="border-bottom: 50vh solid rgb(246, 246, 0);
+        border-left: 2vw solid transparent;
+        border-right: 2vw solid transparent;
         height: 0;
-        width: 25vw;
-     "
-    >
-      <div
-        class="my-1"
-        style="width: 10px; height: 30px; background: yellow"
+        width: 2vw;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translate(-50%,0%);
+        z-index:2;"
       ></div>
-      <div style="width: 10px; height: 50px; background: yellow"></div>
-      <div
-        class="my-2"
-        style="width: 10px; height: 70px; background: yellow"
-      ></div>
-      <div style="width: 10px; height: 90px; background: yellow"></div>
-  
-        <img id="img" src="./img/car.png" style="width:350px;position:absolute;bottom:-50vh;left:50%"/>
-      </div>
+        <img id="img" src="./img/car.png" style="width:350px;position:absolute;bottom:0;left:50%;z-index:3"/>
     </div>
+    <div id="hill" style="position:absolute;bottom:50%;left:50%;transform:translate(-50%,0%);width:20px;height:10px;background:rgb(108, 108, 108);border-radius:20px 20px 0 0 "></div>
     <script>
       //計時器(動作，時間)
       // 綁定
@@ -136,6 +136,7 @@ transform: scale(0.02);
           Light3.style.background = "green";
           Car1.setAttribute("class", "car-middle big");
           Img.setAttribute("class", "img");
+
         }, 2000);
         setTimeout(function () {
           Light1.style.background = "ghostwhite";
