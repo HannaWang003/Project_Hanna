@@ -17,12 +17,18 @@
     ></script>
   </head>
   <style>
+    body{
+      width:100vw;
+      height:100vh;
+      position:relative;
+      background:linear-gradient(rgb(204, 239, 255) 51%, rgb(146, 221, 96) 52%);
+    }
     .light {
-      width: 100px;
-      height: 100px;
+      width: 10vh;
+      height: 10vh;
       border-radius: 50%;
       background: ghostwhite;
-      box-shadow: inset -5px 20px 0px rgb(0, 0, 0);
+      box-shadow: inset -0.5vh 1vh 0px rgb(0, 0, 0);
       border: 5px solid rgb(0, 0, 0);
     }
     .car-middle {
@@ -35,6 +41,48 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    #road{
+      border-bottom: 50vh solid rgb(59, 59, 59);
+        border-left: 30vw solid transparent;
+        border-right: 30vw solid transparent;
+        width: 30vw;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translate(-50%,0%);
+        z-index:1;
+    }
+    .line{
+      border-bottom: 50vh solid rgb(246, 246, 0);
+        border-left: 2vw solid transparent;
+        border-right: 2vw solid transparent;
+        height: 0;
+        width: 2vw;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translate(-50%,0%);
+        z-index:2;
+    }
+    .lightAll{
+      position:absolute;
+      bottom:10px;
+      left:10px;
+      border-radius: 10vh;
+      background:lightseagreen;
+      box-shadow:5px -5px 2px black;
+      z-index:5;
+    }
+    #hill{
+      position:absolute;
+      bottom:50%;
+      left:50%;
+      transform:translate(-50%,0%);
+      width:20px;
+      height:10px;
+      background:rgb(255, 255, 255);
+      border-radius:20px 20px 0 0 ;
     }
     @keyframes move {
       0% {
@@ -56,9 +104,9 @@
 left:50%;
 }
 100%{
-bottom:35%;
-left:36%;
-transform: scale(0.08);
+bottom:32%;
+left:35%;
+transform: scale(0.02);
 }
     }
     .img{
@@ -68,50 +116,25 @@ transform: scale(0.08);
       animation: move ease-in 10s;
     }
   </style>
-  <body>
-    <div class="container mt-2">
-      <div class="row">
-        <div
-          class="col-6 d-flex p-5 rounded-5 bg-success bg-opacity-10 shadow-lg border border-dark">
-          <div id="Light1" class="light"></div>
-          <div id="Light2" class="light mx-2"></div>
-          <div id="Light3" class="light"></div>
-        </div>
-        <div id="Btn" class="col-6">
-          <div class="btn btn-dark p-3">button</div>
-        </div>
-      </div>
+  <body class="pt-5 px-2">
+    <div id="Btn" class="">
+          <div class="btn bg-info bg-opacity-50 p-3" style="box-shadow:inset 0 0 30px rgb(255, 255, 255)">button</div>
     </div>
     <div id="car-middle" class="car-middle"></div>
     <div
       id="road"
-      class="container-fluid"
-      style="
-        border-bottom: 50vh solid rgb(59, 59, 59);
-        border-left: 30vw solid transparent;
-        border-right: 30vw solid transparent;
-        width: 30vw;
-        position:absolute;
-        bottom:0;
-        left:50%;
-        transform:translate(-50%,0%);
-        z-index:1;">        
+      class="container-fluid">        
         </div>
-        <div
-        style="border-bottom: 50vh solid rgb(246, 246, 0);
-        border-left: 2vw solid transparent;
-        border-right: 2vw solid transparent;
-        height: 0;
-        width: 2vw;
-        position:absolute;
-        bottom:0;
-        left:50%;
-        transform:translate(-50%,0%);
-        z-index:2;"
-      ></div>
-        <img id="img" src="./img/car.png" style="width:350px;position:absolute;bottom:0;left:50%;z-index:3"/>
+        <div class="line"></div>
+        <img id="img" src="./img/car.png" style="width:30%;position:absolute;bottom:0;left:50%;z-index:3"/>
     </div>
-    <div id="hill" style="position:absolute;bottom:50%;left:50%;transform:translate(-50%,0%);width:20px;height:10px;background:rgb(108, 108, 108);border-radius:20px 20px 0 0 "></div>
+    <div id="hill"></div>
+    <div
+    class="lightAll p-3 border border-dark d-inline-block">
+    <div id="Light1" class="light d-inline-block"></div>
+    <div id="Light2" class="light d-inline-block mx-2"></div>
+    <div id="Light3" class="light d-inline-block"></div>
+  </div>
     <script>
       //計時器(動作，時間)
       // 綁定
