@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .light {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: ghostwhite;
+      box-shadow: inset -5px 20px 0px rgb(0, 0, 0);
+      border: 5px solid rgb(0, 0, 0);
+    }
+    .car {
+      position: absolute;
+      bottom: 100px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      transform-origin: 100% 100%;
+      transform: rotate(5deg);
+    }
+    .header {
+      border-bottom: 80px solid rgb(168, 157, 122);
+      border-left: 50px solid transparent;
+      border-right: 10px solid transparent;
+      height: 0;
+      width: 200px;
+      margin-left: 20px;
+    }
+    .car-body {
+      background-color: rgb(168, 157, 122);
+      height: 100px;
+      width: 350px;
+      border-radius: 0px 10px 0 0;
+      box-shadow: 5px 5px 10px rgb(0, 0, 0);
+      border-radius: 20px 0 0 0;
+    }
+    .car-bottom {
+      width: 100px;
+      height: 100px;
+      margin-top: -50px;
+      box-shadow: 10px 5px 0px rgb(7, 7, 7);
+      background: radial-gradient(rgb(141, 141, 141) 20%, rgb(88, 88, 88) 20%);
+    }
+    .fog {
+      position: absolute;
+      bottom: 150px;
+      right: 100px;
+    }
+    #fog {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      background: rgb(46, 46, 46);
+      position: absolute;
+      bottom: 150px;
+      right: 80px;
+    }
+    #fog1 {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background: rgb(131, 131, 131);
+      position: absolute;
+      bottom: 160px;
+      right: 250px;
+    }
+    #fog2 {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      background: rgb(233, 233, 233);
+      position: absolute;
+      bottom: 180px;
+      right: 400px;
+    }
+    @keyframes move {
+      0% {
+        right: 0;
+      }
+      100% {
+        right: 100%;
+        bottom: 270px;
+      }
+    }
+    .animation {
+      animation: move ease-in 10s;
+    }
+  </style>
+  <body
+    class="bg-info bg-opacity-10"
+    style="box-shadow: inset 0 0 50px lightblue; padding: 50px"
+  >
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div
+          class="col-6 d-flex p-5 rounded-5 bg-success bg-opacity-10 shadow-lg border border-dark"
+        >
+          <div id="Light1" class="light"></div>
+          <div id="Light2" class="light mx-2"></div>
+          <div id="Light3" class="light"></div>
+        </div>
+        <div id="Btn" class="col">
+          <div class="btn btn-dark p-5">button</div>
+        </div>
+      </div>
+      <div id="car" class="car">
+        <div class="header"></div>
+        <div class="car-body"></div>
+        <div class="d-flex justify-content-around">
+          <div class="rounded-circle car-bottom"></div>
+          <div class="rounded-circle car-bottom"></div>
+        </div>
+      </div>
+      <div id="fog" class="d-none"></div>
+      <div id="fog1" class="d-none"></div>
+      <div id="fog2" class="d-none"></div>
+    </div>
+    <div
+      class="container-fluid fixed-bottom"
+      style="
+        height: 100px;
+        background: rgb(0, 0, 0);
+        box-shadow: 0 0px 10px rgb(180, 180, 180);
+        border-top: 50px double rgb(229, 235, 173);
+        transform-origin: top right;
+        transform: rotate(5deg);
+      "
+    ></div>
+    <script>
+      //計時器(動作，時間)
+      // 綁定
+      let Btn = document.getElementById("Btn");
+      let Light1 = document.getElementById("Light1");
+      let Light2 = document.getElementById("Light2");
+      let Light3 = document.getElementById("Light3");
+      let Car = document.getElementById("car");
+      let Fog = document.getElementById("fog");
+      let Fog1 = document.getElementById("fog1");
+      let Fog2 = document.getElementById("fog2");
+      //測試用 - console.log("Btn", Btn);
+      //動作
+      function changeFun() {
+        setTimeout(function () {
+          Light1.setAttribute("style", "background:red");
+          Btn.setAttribute("class", "d-none");
+          // Light1.style.background = "red";
+        }, 1000);
+        setTimeout(function () {
+          Light1.setAttribute("style", "background:ghostwhiter");
+          Light2.setAttribute("style", "background:ghostwhiter");
+          Light3.style.background = "green";
+          Car.setAttribute("class", "animation car");
+        }, 2000);
+        setTimeout(function () {
+          Fog.setAttribute("class", "d-block");
+        }, 4000);
+        setTimeout(function () {
+          Fog1.setAttribute("class", "d-block");
+        }, 5000);
+        setTimeout(function () {
+          Fog2.setAttribute("class", "d-block");
+        }, 6000);
+        setTimeout(function () {
+          Light1.style.background = "ghostwhite";
+          Light2.style.background = "orange";
+          Light3.style.background = "ghostwhite";
+        }, 9000);
+        setTimeout(function () {
+          Light1.style.background = "red";
+          Light2.style.background = "ghostwhite";
+          Light3.style.background = "ghostwhite";
+          Fog.setAttribute("class", "d-none");
+          Fog1.setAttribute("class", "d-none");
+          Fog2.setAttribute("class", "d-none");
+        }, 11000);
+        setTimeout(function () {
+          Light1.style.background = "ghostwhite";
+          Light2.style.background = "ghostwhite";
+          Light3.style.background = "ghostwhite";
+          Btn.setAttribute("class", "col");
+          Car.setAttribute("class", "car");
+        }, 13000);
+      }
+      Btn.addEventListener("click", changeFun);
+      // 測試用 - Btn.addEventListener("click", function () {
+      //   console.log("Btn", Btn);
+      // });
+    </script>
+  </body>
+</html>

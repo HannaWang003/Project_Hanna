@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .light {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: ghostwhite;
+      box-shadow: inset -5px 20px 0px rgb(0, 0, 0);
+      border: 5px solid rgb(0, 0, 0);
+    }
+    .car-middle {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px 25px 0 0;
+      background: rgb(226, 226, 226);
+      position: absolute;
+      box-shadow: inset 0px 0px 20px rgb(7, 7, 7);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @keyframes move {
+      0% {
+        transform: scale(1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      100% {
+        transform: scale(20);
+        bottom: 0%;
+        /* left: 50%;
+        transform: translate(-50%, -50%); */
+      }
+    }
+    @keyframes ab {
+0%{
+left:50%;
+}
+100%{
+bottom:0px;
+left:0px;
+transform: scale(0.02);
+}
+    }
+    .img{
+    animation:ab ease-in 10s;
+    }
+    .big {
+      animation: move ease-in 10s;
+    }
+  </style>
+  <body
+    class="bg-info bg-opacity-10"
+    style="box-shadow: inset 0 0 50px lightblue; padding: 50px;position:realtive;"
+  >
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div
+          class="col-6 d-flex p-5 rounded-5 bg-success bg-opacity-10 shadow-lg border border-dark"
+        >
+          <div id="Light1" class="light"></div>
+          <div id="Light2" class="light mx-2"></div>
+          <div id="Light3" class="light"></div>
+        </div>
+        <div id="Btn" class="col">
+          <div class="btn btn-dark p-5">button</div>
+        </div>
+      </div>
+    </div>
+    <div id="car-middle" class="car-middle"></div>
+    <div
+      id="road"
+      class="container-fluid fixed-bottom"
+      style="
+        border-bottom: 50vh solid rgb(32, 32, 29);
+        border-left: 25vw solid transparent;
+        border-right: 25vw solid transparent;
+        height: 0;
+        width: 25vw;
+     "
+    >
+      <div
+        class="my-1"
+        style="width: 10px; height: 30px; background: yellow"
+      ></div>
+      <div style="width: 10px; height: 50px; background: yellow"></div>
+      <div
+        class="my-2"
+        style="width: 10px; height: 70px; background: yellow"
+      ></div>
+      <div style="width: 10px; height: 90px; background: yellow"></div>
+  
+        <img id="img" src="./img/car.png" style="width:350px;position:absolute;bottom:-50vh;left:50%"/>
+      </div>
+    </div>
+    <script>
+      //計時器(動作，時間)
+      // 綁定
+      let Btn = document.getElementById("Btn");
+      let Light1 = document.getElementById("Light1");
+      let Light2 = document.getElementById("Light2");
+      let Light3 = document.getElementById("Light3");
+      let Car1 = document.getElementById("car-middle");
+      let Img = document.getElementById("img");
+      
+      //測試用 - console.log("Btn", Btn);
+      //動作
+      function changeFun() {
+        setTimeout(function () {
+          Light1.setAttribute("style", "background:red");
+          Btn.setAttribute("class", "d-none");
+          // Light1.style.background = "red";
+        }, 1000);
+        setTimeout(function () {
+          Light1.setAttribute("style", "background:ghostwhiter");
+          Light2.setAttribute("style", "background:ghostwhiter");
+          Light3.style.background = "green";
+          Car1.setAttribute("class", "car-middle big");
+          Img.setAttribute("class", "img");
+        }, 2000);
+        setTimeout(function () {
+          Light1.style.background = "ghostwhite";
+          Light2.style.background = "orange";
+          Light3.style.background = "ghostwhite";
+        }, 9000);
+        setTimeout(function () {
+          Light1.style.background = "red";
+          Light2.style.background = "ghostwhite";
+          Light3.style.background = "ghostwhite";
+        }, 11000);
+        setTimeout(function () {
+          Light1.style.background = "ghostwhite";
+          Light2.style.background = "ghostwhite";
+          Light3.style.background = "ghostwhite";
+          Btn.setAttribute("class", "col");
+          Car1.setAttribute("class", "car-middle");
+          Img.setAttribute("class", "");
+        }, 13000);
+      }
+      Btn.addEventListener("click", changeFun);
+      // 測試用 - Btn.addEventListener("click", function () {
+      //   console.log("Btn", Btn);
+      // });
+    </script>
+  </body>
+</html>
