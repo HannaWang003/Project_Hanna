@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="myInput" value="123" />
+    <input type="text" id="myInput" style="color: red" />
 
     <script>
       let x = 10;
@@ -27,10 +27,19 @@
       //   console.log("myInput", myInput);
       const myInput = document.getElementById("myInput");
       console.log("myInput", myInput);
-      myInput.value = "55688";
-      console.log("myInput", myInput);
-      myInput = 123;
-      console.log("myInput", myInput);
+      //   myInput.setAttribute("value", "55688");
+      myInput.style = "background:yellow";
+      console.info("myInput", myInput);
+      myInput.value = "777";
+      //   myInput.setAttribute("style", "background:black");
+      console.dir(myInput);
+      //   console.log("myInput", myInput);
+      //   console.log("myInput", myInput);
+      //   console.log("myInput", myInput);
+      //   console.log("myInput", myInput);
+
+      //   myInput = 123;
+      //   console.log("myInput", myInput);
     </script>
   </body>
 </html>
