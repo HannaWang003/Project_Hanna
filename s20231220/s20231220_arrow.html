@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <bottom class="btn btn-secondary" id="myBtn">myBtn</bottom>
+    <bottom class="btn btn-secondary" id="myBtnArrow">myBtnArrow</bottom>
+    <script>
+      let MyBtn = document.getElementById("myBtn");
+      let MyBtnArrow = document.getElementById("myBtnArrow");
+      const obj = {
+        a: () => {
+          console.log("this", this);
+        },
+        b: function () {
+          console.log("this", this);
+        },
+      };
+      MyBtn.addEventListener("click", function () {
+        obj.b();
+      });
+
+      MyBtnArrow.addEventListener("click", () => obj.b());
+      MyBtnArrow.addEventListener("click", function () {
+        console.log("this", this);
+      });
+    </script>
+  </body>
+</html>
