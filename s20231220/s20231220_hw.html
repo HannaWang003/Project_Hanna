@@ -21,7 +21,7 @@
       <div class="row">
         <input class="m-3 col-3" type="text" id="name" class="input-control" />
         <select class="m-3 col-3" name="" id="myselect">
-          <option value="select"></option>
+          <option value=""></option>
           <option value="happy"></option>
           <option value="upset"></option>
           <option value="normal"></option>
@@ -58,15 +58,22 @@
       MyBtn.addEventListener("click", function () {
         Now.name = Name.value;
         let FMySelect = MySelect.value;
+        if (FMySelect.length <= 0) {
+          alert("請選擇心情狀態");
+          return false;
+        }
         switch (FMySelect) {
           case "happy":
             Result.innerHTML = Now.happy();
+            Result.setAttribute("class", "text-danger");
             break;
           case "upset":
-            Now.upset();
+            Result.innerHTML = Now.upset();
+            Result.setAttribute("class", "text-dark");
             break;
           case "normal":
-            Now.normal();
+            Result.innerHTML = Now.normal();
+            Result.setAttribute("class", "text-success");
             break;
         }
       });
