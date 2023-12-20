@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <input class="m-3 col-3" type="text" id="name" class="input-control" />
+        <select class="m-3 col-3" name="" id="myselect">
+          <option value="select"></option>
+          <option value="happy"></option>
+          <option value="upset"></option>
+          <option value="normal"></option>
+        </select>
+      </div>
+      <button class="btn btn-info" type="button" id="myBtn">顯示</button>
+      <div id="result"></div>
+    </div>
+    <script>
+      let Name = document.getElementById("name");
+      let MySelect = document.getElementById("myselect");
+      let MyBtn = document.getElementById("myBtn");
+      let Result = document.getElementById("result");
+      const Now = {
+        name: "name",
+        happy: function () {
+          return this.name + "開心中";
+        },
+        upset: function () {
+          return this.name + "難過中";
+        },
+        normal: function () {
+          return this.name + "心情普普通通";
+        },
+      };
+      let mood = {
+        type: ["--請選擇--", "開心", "難過", "普通"],
+        level: ["very", "soso"],
+      };
+      MySelect.options[0].text = mood.type[0];
+      MySelect.options[1].text = mood.type[1];
+      MySelect.options[2].text = mood.type[2];
+      MySelect.options[3].text = mood.type[3];
+      MyBtn.addEventListener("click", function () {
+        Now.name = Name.value;
+        let FMySelect = MySelect.value;
+        switch (FMySelect) {
+          case "happy":
+            Result.innerHTML = Now.happy();
+            break;
+          case "upset":
+            Now.upset();
+            break;
+          case "normal":
+            Now.normal();
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
