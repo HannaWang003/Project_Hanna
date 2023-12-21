@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="fruit"></div>
+    <table id="Obj"></table>
+    <script>
+      //new Date()
+      function check() {
+        let day = new Date().getDay();
+
+        if (0 < day && day < 6) {
+          document.write("上班日");
+        } else {
+          document.write("週末");
+        }
+      }
+      check();
+
+      //for...in陣列
+      let Fruit = document.getElementById("fruit");
+      let ObjTable = document.getElementById("Obj");
+      let fruit = ["apple", "tomato", "strawberry"];
+      let string = "";
+      for (let x in fruit) {
+        console.log(x); //值
+        string += `<spa>${fruit[x]}</span><br>`;
+        console.log(fruit[x]); //=>值
+      }
+      Fruit.innerHTML = string;
+
+      //for...in物件
+      let Obj = {
+        name: "apple",
+        type: "fruit",
+      };
+      let tmp = "";
+      for (let y in Obj) {
+        console.log(y);
+        console.log(Obj[y]);
+        tmp += `<tr><td style="color:lightblue;border:1px solid black">${Obj[y]}</td></tr>`;
+      }
+      ObjTable.innerHTML = tmp;
+
+      //continue / break
+      for (let a = 0; a <= 10; a++) {
+        if (a == 3) {
+          console.log(a);
+          continue;
+        }
+        if (a == 8) {
+          console.log(a);
+          break;
+        }
+        console.log("for loop = " + a);
+      }
+    </script>
+  </body>
+</html>
