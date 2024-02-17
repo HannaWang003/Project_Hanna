@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>投籃機大賽</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <h1 class="text-center m-3">投籃大賽</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="border border-secondary w-50 m-auto">
+            <h3 class="text-center">score</h3>
+            <h2 class="text-center">
+              歷史最高分<b id="highSpan" class="text-danger"></b>
+            </h2>
+            <div class="text-center">
+              <span>得分:</span><span id="yourScore"></span>
+            </div>
+            <hr />
+            <div class="text-center">
+              <span>倒數:</span><spna id="timeSpan"></spna><span>秒</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <div class="border border-secondary w-50 m-auto text-center p-3">
+            <button id="startBtn" class="btn btn-warning w-25">開始</button>
+            <button id="shootBtn" class="btn btn-danger w-25">投籃</button>
+            <button id="closeBtn" class="btn btn-light w-25">結束</button>
+            <button id="resetBtn" class="btn btn-secondary w-25">重置</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container text-center">
+      <img id="a" src="./img/a.png" alt="" />
+      <img id="b" src="./img/b.png" alt="" />
+      <img id="c" src="./img/c.png" alt="" />
+      <img id="d" src="./img/d.png" alt="" />
+      <img id="e" src="./img/e.png" alt="" />
+    </div>
+    <img
+      id="m1"
+      src="./img/1.jpg"
+      style="min-height: 100vh"
+      class="position-absolute top-0 end-0"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.js"></script>
+    <script>
+      let score = 0;
+      let nowTime = 10;
+      let highScore = 0;
+      const yourScore = $("#yourScore");
+      const startBtn = $("#startBtn");
+      const shootBtn = $("#shootBtn");
+      const resetBtn = $("#resetBtn");
+      const closeBtn = $("#closeBtn");
+      const timeSpan = $("#timeSpan");
+      const highSpan = $("#highSpan");
+      shootBtn.hide();
+      closeBtn.hide();
+      $("#m1").hide();
+      highSpan.text(highScore);
+      timeSpan.text(nowTime);
+      startBtn.click(function (e) {
+        startBtn.hide();
+        shootBtn.show();
+        resetBtn.hide();
+        yourScore.text(score);
+        const myInterval = setInterval(() => {
+          if (nowTime <= 0) {
+            clearInterval(myInterval);
+            shootBtn.hide();
+            closeBtn.show();
+          }
+          timeSpan.text(nowTime);
+          nowTime -= 1;
+        }, 1000);
+      });
+      closeBtn.on("click", function () {
+        resetBtn.show();
+        if (score > highScore) {
+          highScore = score;
+          highSpan.text(highScore);
+        }
+      });
+      shootBtn.on("click", function () {
+        if (nowTime <= 5) {
+          score += 3;
+          $("#m1").show();
+        } else {
+          score += 2;
+        }
+        yourScore.text(score);
+        if (score >= highScore) {
+          $("#yourScore").attr("class", "text-danger fs-2");
+        } else if (score >= highScore - 20) {
+          $("#yourScore").attr("class", "text-success fs-3");
+        } else {
+          $("#yourScore").attr("class", "text-dark");
+        }
+      });
+      resetBtn.on("click", function () {
+        score = 0;
+        nowTime = 10;
+        yourScore.text(score);
+        timeSpan.text(nowTime);
+        startBtn.show();
+        closeBtn.hide();
+        $("#m1").hide();
+        $("#yourScore").removeAttr("class");
+      });
+
+      var t1 = gsap.timeline();
+      t1.from("#a", { x: -1000, duration: 0.5, ease: "sine.out", opacity: 0 })
+        .from("#b", { x: -1000, duration: 0.5, ease: "sine.out", opacity: 0 })
+        .from("#c", { x: -1000, duration: 0.5, ease: "sine.out", opacity: 0 })
+        .from("#d", { x: -1000, duration: 0.5, ease: "sine.out", opacity: 0 })
+        .from("#e", { x: -1000, duration: 0.5, ease: "sine.out", opacity: 0 });
+    </script>
+  </body>
+</html>
