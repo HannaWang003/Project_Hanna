@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      a();
+      function a() {
+        let strArr = ["amy", "bob", "caty"];
+        console.log("strArr", strArr);
+        console.log("strArr", typeof strArr);
+        let result = Array.isArray(strArr);
+        console.log("strArr is array?", result);
+        console.log(typeof result);
+
+        console.log("以下是array forEach結果:");
+        strArr.forEach((val, idx) => {
+          console.log(idx + ":", val);
+        });
+      }
+      //
+      b();
+      function b() {
+        let myObj = {
+          s1: "amy",
+          s2: "bob",
+          s3: "caty",
+        };
+        console.log("myObj", myObj);
+        console.log("myObj", typeof myObj);
+        let resultObj = Array.isArray(myObj);
+        console.log("myObj is array?", resultObj);
+        // console.log("以下是object forEach結果:");
+        // myObj.forEach((val, idx) => {
+        //   console.log(idx + ":", val);
+        // });
+        console.log("以下是object for( in )結果:");
+        for (const key in myObj) {
+          console.log("key", key);
+          console.log(`${key}=`, `${myObj[key]}`);
+        }
+        //object to array
+        let storeArr = [
+          {
+            name: "台北店",
+            tel: "0911-111-111",
+          },
+          {
+            name: "台中店",
+            tel: "0922-222-222",
+          },
+          {
+            name: "高雄店",
+            tel: "0933-333-333",
+          },
+        ];
+        console.log("storeArr", storeArr);
+        storeArr.forEach(function (value, key) {
+          console.log("key", key);
+          console.log("value", value);
+          console.log('value["name"]', value["name"]);
+          console.log('value["tel"]', value["tel"]);
+          if (value["name"] == "台北店") {
+            console.log("這是台北店");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

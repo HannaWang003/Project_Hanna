@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .col {
+      text-align: center;
+      line-height: 100px;
+    }
+    .row {
+      margin: 10px 0;
+      border: 1px solid black;
+      padding: 5px;
+      box-shadow: 3px 0 5px rgb(0, 0, 0);
+    }
+    button {
+      width: 80px;
+      height: 80px;
+      /* box-shadow: inset 0px 0px 20px rgb(165, 1, 1); */
+    }
+    #typeContainer {
+      font-size: 3rem;
+    }
+  </style>
+  <body>
+    <div class="container my-5">
+      <div class="text-end">
+        <button id="add" class="btn btn-secondary">
+          <i class="fa-solid fa-infinity fa-2xl"></i>
+        </button>
+      </div>
+      <span id="typeContainer"></span>
+      <div id="title" class="row text-center">
+        <div class="col">ID</div>
+        <div class="col">NAME</div>
+        <div class="col">OPERATE</div>
+      </div>
+      <div class="row text-center">
+        <div class="col">1</div>
+        <div class="col">amy</div>
+        <div class="col">
+          <button class="btn btn-outline-secondary">
+            <i class="clonebtn fa-solid fa-clone fa-2xl"></i>
+          </button>
+          <button class="btn btn-danger">
+            <i class="delbtn fa-solid fa-delete-left fa-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">2</div>
+        <div class="col">bob</div>
+        <div class="col">
+          <button class="btn btn-outline-secondary">
+            <i class="clonebtn fa-solid fa-clone fa-2xl"></i>
+          </button>
+          <button class="btn btn-danger">
+            <i class="delbtn fa-solid fa-delete-left fa-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">3</div>
+        <div class="col">cat</div>
+        <div class="col">
+          <button class="btn btn-outline-secondary">
+            <i class="clonebtn fa-solid fa-clone fa-2xl"></i>
+          </button>
+          <button class="btn btn-danger">
+            <i class="delbtn fa-solid fa-delete-left fa-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        let options = {
+          strings: ["Delete", "Something", "ELSE", "o r", "Clone", "Something"],
+          typeSpeed: 100, // 打字速度（每個字符的毫秒數）
+          backSpeed: 60, // 刪除速度（每個字符的毫秒數）
+          backDelay: 500, // 刪除完成後延遲再次打字的時間
+          loop: true, // 是否循環顯示字符串
+        };
+
+        var typed = new Typed("#typeContainer", options);
+
+        $(".delbtn").on("click", (e) => {
+          // console.log($(e.target).closest(".row"));
+          $(e.target).closest(".row").remove();
+        });
+        $("#add").on("click", (e) => {
+          let cloneRow = $(".container").find(".row").last();
+          console.log(cloneRow);
+          cloneRow.clone(true).appendTo(".container");
+        });
+        $(".clonebtn").on("click", (e) => {
+          $(e.target).closest(".row").clone(true).appendTo(".container");
+        });
+      });
+    </script>
+  </body>
+</html>

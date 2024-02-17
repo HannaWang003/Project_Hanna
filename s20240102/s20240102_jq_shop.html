@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    .box {
+      padding: 10px;
+    }
+    img {
+      box-shadow: 10px 10px 5px black;
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <h1>SHOP</h1>
+      <table class="table table-hover align-middle text-center">
+        <thead>
+          <tr>
+            <th scope="col">品名</th>
+            <th scope="col">單價</th>
+            <th scope="col">數量</th>
+            <th scope="col">總價</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <div class="box">
+                <img src="https://picsum.photos/id/39/160/120" alt="" />
+              </div>
+            </th>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-price"
+                id="item1Price"
+                value="100"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control my-num"
+                id="item1Num"
+                value="1"
+              />
+            </td>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-total"
+                id="item1Total"
+                value="100"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <div class="box">
+                <img src="https://picsum.photos/id/80/160/120" alt="" />
+              </div>
+            </th>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-price"
+                value="200"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="number" class="form-control my-num" value="1" />
+            </td>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-total"
+                value="200"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <div class="box">
+                <img src="https://picsum.photos/id/75/160/120" alt="" />
+              </div>
+            </th>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-price"
+                value="300"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="number" class="form-control my-num" value="1" />
+            </td>
+            <td>
+              <!-- readonly不能被使用者輸入 -->
+              <input
+                type="number"
+                class="form-control my-total"
+                value="300"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>總額</td>
+            <td><span id="sum"></span></td>
+            <td>
+              <button class="btn btn-secondary" id="myBtn">
+                計算(1000 10% discount)
+              </button>
+            </td>
+            <td><span id="dis"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        function sumFun() {
+          let total = 0;
+          $.each(myTotal, function (key, value) {
+            total += Number($(value).val());
+          });
+          if (total >= 1000) {
+            sum.text(total * 0.9);
+            disResult = "取得折扣" + total * 0.1;
+            dis.text(disResult);
+            dis.attr("class", "bg-danger text-light p-3 rounded-pill");
+          } else {
+            sum.text(total);
+            dis.text(0);
+          }
+        }
+
+        const myPrice = $(".my-price");
+        const myNum = $(".my-num");
+        const myTotal = $(".my-total");
+        const sum = $("#sum");
+        const dis = $("#dis");
+        myNum.change(function () {
+          let trObj = $(this).parent().parent();
+          let nowPrice = trObj.find(".my-price");
+          let nowNum = trObj.find(".my-num");
+          let nowTotal = trObj.find(".my-total");
+          let getPrice = Number(nowPrice.val());
+          let getNum = Number(nowNum.val());
+          let resultTotal = getPrice * getNum;
+          nowTotal.val(resultTotal);
+        });
+        let myBtn = $("#myBtn");
+
+        myBtn.click(function () {
+          sumFun();
+        });
+      });
+    </script>
+  </body>
+</html>

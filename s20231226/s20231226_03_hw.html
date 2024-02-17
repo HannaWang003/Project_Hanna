@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let sum = Number(0);
+      let evensum = Number(0);
+      let oddsum = Number(0);
+      data.forEach((val, idx) => {
+        sum += Number(val);
+        if (val % 2 == 0) {
+          oddsum += Number(val);
+          console.log("偶數", val);
+          evensum = sum - oddsum;
+        }
+      });
+      console.log("1~10加總:", sum);
+      console.log("基數加總:", evensum);
+      console.log("偶數加總:", oddsum);
+    </script>
+  </body>
+</html>

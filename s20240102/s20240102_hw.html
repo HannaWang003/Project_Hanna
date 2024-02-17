@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <div
+            class="myBtn bg-info text-center p-3"
+            data-ad="#ad1"
+            data-ani="toggle"
+          >
+            toggle
+          </div>
+          <div id="ad1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium aliquid ex consectetur aspernatur harum, beatae eos
+            veritatis doloribus eaque obcaecati voluptatem iure, ipsum aperiam
+            provident veniam perferendis architecto impedit magni! Nulla
+            deleniti velit incidunt excepturi possimus recusandae consectetur
+            error ratione quo, aperiam minima aspernatur quas assumenda aut
+            consequuntur nemo. Commodi magnam sunt quae provident aut in impedit
+            laborum delectus voluptatum.
+          </div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div
+            class="myBtn bg-info text-center p-3 rounded-3"
+            data-ad="#ad2"
+            data-ani="fadeToggle"
+          >
+            fadeToggle
+          </div>
+          <div id="ad2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium aliquid ex consectetur aspernatur harum, beatae eos
+            veritatis doloribus eaque obcaecati voluptatem iure, ipsum aperiam
+            provident veniam perferendis architecto impedit magni! Nulla
+            deleniti velit incidunt excepturi possimus recusandae consectetur
+            error ratione quo, aperiam minima aspernatur quas assumenda aut
+            consequuntur nemo. Commodi magnam sunt quae provident aut in impedit
+            laborum delectus voluptatum.
+          </div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div
+            class="myBtn bg-info text-center p-3 rounded-pill"
+            data-ad="#ad3"
+            data-ani="slideToggle"
+          >
+            slideToggle
+          </div>
+          <div id="ad3">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium aliquid ex consectetur aspernatur harum, beatae eos
+            veritatis doloribus eaque obcaecati voluptatem iure, ipsum aperiam
+            provident veniam perferendis architecto impedit magni! Nulla
+            deleniti velit incidunt excepturi possimus recusandae consectetur
+            error ratione quo, aperiam minima aspernatur quas assumenda aut
+            consequuntur nemo. Commodi magnam sunt quae provident aut in impedit
+            laborum delectus voluptatum.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        const myBtn = $(".myBtn");
+        myBtn.click(function () {
+          let getDataAd = $(this).attr("data-ad");
+          let getDataAni = $(this).attr("data-ani");
+          console.log(getDataAni);
+          switch (getDataAni) {
+            case "toggle":
+              $(getDataAd).toggle(3000);
+              break;
+            case "fadeToggle":
+              $(getDataAd).fadeToggle(3000);
+              break;
+            case "slideToggle":
+              $(getDataAd).slideToggle(3000);
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

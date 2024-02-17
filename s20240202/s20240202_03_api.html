@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+  </head>
+  <style>
+    * {
+      font-size: calc(0.75em+1.5vw);
+    }
+    .row {
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3 class="text-center mt-3">臺北市 今日施工資訊</h3>
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th class="text-center">行政區<br />(C_Name)</th>
+            <th class="text-center">施工位置<br />(Addr)</th>
+            <th class="text-center">挖掘目的<br />(NPurp)</th>
+            <th class="text-center">施工時段<br />(Co_Ti)</th>
+            <th class="text-center">影響通行<br />(IsBlock)</th>
+            <th class="text-center">核准施工期<br />(Cb_Da)</th>
+            <th class="text-center">核准完工期<br />(Ce_Da)</th>
+          </tr>
+        </thead>
+        <tbody id="ApiTitle"></tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script>
+      $.ajax({
+        type: "get",
+        url: "./data/Todaywork.json",
+        data: "data",
+        dataType: "json",
+        success: function (res) {
+          console.log("res", res.features);
+          let html = "";
+          // let tmp = [];
+          $.each(res.features, function (idx, data) {
+            console.log("data", data.properties);
+            html += `<tr>
+              <td>${data.properties.C_Name}</td>
+              <td>${data.properties.Addr}</td>
+                <td>${data.properties.NPurp}</td>
+                <td>${data.properties.Co_Ti}</td>
+                <td>${data.properties.IsBlock}</td>
+                <td>${data.properties.Cb_Da}</td>
+                <td>${data.properties.Ce_Da}</td>
+              </tr>
+              `;
+            // tmp.push(data.properties.C_Name);
+          });
+          // let opt = tmp.indexOf();
+
+          $("#ApiTitle").append(html);
+          $("#myTable").DataTable();
+        },
+      });
+    </script>
+  </body>
+</html>

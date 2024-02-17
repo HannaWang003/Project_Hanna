@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        const obj = {
+          s1: "amy",
+          s2: "kath",
+          s3: "bob",
+        };
+        console.log("obj", obj);
+
+        const storeArr = [
+          {
+            name: "台北店",
+            mobile: "0911-111-111",
+          },
+          {
+            name: "台中店",
+            mobile: "0922-222-222",
+          },
+          {
+            name: "高雄店",
+            mobile: "0933-333-333",
+          },
+        ];
+        console.log("storeArr", storeArr);
+        storeArr.forEach((elm) => {
+          console.log("elm", elm);
+        });
+        //練習
+        //通訊行
+        //iphone10 10000 台北
+        //iphone11 20000 台北 台中
+        //iphone12 30000 高雄
+        //iphone13 40000 台北 台中 高雄
+        const iphoneArr = [
+          {
+            id: 1,
+            model: "iphone10",
+            price: "10000",
+            location: ["taipei"],
+          },
+          {
+            id: 2,
+            model: "iphone11",
+            price: "20000",
+            location: ["taipei", "taithung"],
+          },
+          {
+            id: 3,
+            model: "iphone12",
+            price: "30000",
+            location: ["kaoshoung"],
+          },
+          {
+            id: 4,
+            model: "iphone13",
+            price: "40000",
+            location: ["taipei", "taithung", "kaoshoung"],
+          },
+        ];
+        //js
+        iphoneArr.forEach((element) => {
+          console.log("iphone", element);
+          element.location.forEach((loca) => {
+            console.log("location", loca);
+          });
+        });
+        //jq
+        $.each(iphoneArr, function (idx, iphone) {
+          console.log(idx + 1, iphone);
+        });
+        $.ajax({
+          type: "get",
+          url: "ios-api.php",
+          data: "data",
+          dataType: "json",
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (response) {
+            console.log("error", response);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

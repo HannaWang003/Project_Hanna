@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <body>
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col">
+          <form action="/action_page.php">
+            <label id="typing-container" for="gsearch"></label>
+            <br />
+            <input
+              type="search"
+              id="gsearch"
+              name="gsearch"
+              style="width: 50%"
+            />
+            <input type="submit" value="Go" class="btn btn-outline-dark" />
+          </form>
+        </div>
+      </div>
+      <hr />
+      <div class="row text-center">
+        <div class="col">
+          <button class="btn btn-outline-secondary" data-set="新北市">
+            新北市
+          </button>
+          <button class="btn btn-outline-secondary" data-set="台北市">
+            台北市
+          </button>
+          <button class="btn btn-outline-secondary" data-set="台中市">
+            台中市
+          </button>
+          <button class="btn btn-outline-secondary" data-set="高雄市">
+            高雄市
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        let options = {
+          strings: ["choose", "location", "S E A R C H"],
+          typeSpeed: 100, // 打字速度（每個字符的毫秒數）
+          backSpeed: 60, // 刪除速度（每個字符的毫秒數）
+          backDelay: 1000, // 刪除完成後延遲再次打字的時間
+          loop: true, // 是否循環顯示字符串
+        };
+
+        var typed = new Typed("#typing-container", options);
+
+        let Search = $("#gsearch");
+        $(".btn").on("click", (e) => {
+          // console.log(e.target);
+          let set = $(e.target).data("set");
+          // console.log(set);
+          Search.val(set);
+          $(".btn").attr("class", "btn btn-outline-dark");
+          $(e.target).attr("class", "btn btn-info shadow-sm");
+        });
+      });
+    </script>
+  </body>
+</html>

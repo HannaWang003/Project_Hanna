@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    img {
+      width: 200px;
+      box-shadow: 10px 10px 10px black;
+      margin: 10px;
+    }
+    th {
+      text-align: center;
+    }
+    button {
+      box-shadow: inset 2px 2px 5px rgb(0, 0, 0);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="mt-2">ORDER</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">WINE</th>
+            <th scope="col">Price/pre</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Sale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><img src="./img/1.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item1Price"
+                value="5000"
+                class="form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item1Num"
+                value="1"
+                class="form-control"
+              />
+            </td>
+            <td class="text-center"><span id="item1"></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="./img/2.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item2Price"
+                value="15000"
+                class="form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item2Num"
+                value="1"
+                class="form-control"
+              />
+            </td>
+            <td class="text-center"><span id="item2"></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="./img/3.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item3Price"
+                value="6000"
+                class="form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                name=""
+                id="item3Num"
+                value="1"
+                class="form-control"
+              />
+            </td>
+            <td class="text-center"><span id="item3"></span></td>
+          </tr>
+          <tr>
+            <th class="bg-light">Gross Sales</th>
+            <td class="text-center"><span id="total"></span></td>
+            <td class="bg-secondary bg-opacity-10">
+              <span class="pe-1 ps-5 fw-bolder">Discount:</span
+              ><span id="dis"></span>
+            </td>
+            <td class="text-end bg-secondary bg-opacity-10">
+              <button type="button" id="myBtn" class="btn p-3">
+                60,000 up 10% discount
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      let total = document.getElementById("total");
+      let dis = document.getElementById("dis");
+      const item1Price = document.getElementById("item1Price");
+      const item1Num = document.getElementById("item1Num");
+      let item1 = document.getElementById("item1");
+      const item2Price = document.getElementById("item2Price");
+      const item2Num = document.getElementById("item2Num");
+      let item2 = document.getElementById("item2");
+      const item3Price = document.getElementById("item3Price");
+      const item3Num = document.getElementById("item3Num");
+      let item3 = document.getElementById("item3");
+      const myBtn = document.getElementById("myBtn");
+
+      function item1Fun() {
+        let getItem1Price = Number(item1Price.value);
+        let getItem1Num = Number(item1Num.value);
+        let resultItem1Total = getItem1Price * getItem1Num;
+        item1.innerText = resultItem1Total;
+      }
+      function item2Fun() {
+        let getItem2Price = Number(item2Price.value);
+        let getItem2Num = Number(item2Num.value);
+        let resultItem2Total = getItem2Price * getItem2Num;
+        item2.innerText = resultItem2Total;
+      }
+      function item3Fun() {
+        let getItem3Price = Number(item3Price.value);
+        let getItem3Num = Number(item3Num.value);
+        let resultItem3Total = getItem3Price * getItem3Num;
+        item3.innerText = resultItem3Total;
+      }
+
+      item1Price.addEventListener("change", function () {
+        // let itemsum = item1Price.value * item1Num.value;
+        // item1.innerText = itemSum;
+        item1Fun();
+      });
+      item1Num.addEventListener("change", function () {
+        // itemSum = item1Price.value * item1Num.value;
+        // item1.innerText = itemSum;
+        item1Fun();
+      });
+
+      item2Price.addEventListener("change", function () {
+        // itemSum = item2Price.value * item2Num.value;
+        // item2.innerText = itemSum;
+        item2Fun();
+      });
+      item2Num.addEventListener("change", function () {
+        // itemSum = item2Price.value * item2Num.value;
+        // item2.innerText = itemSum;
+        item2Fun();
+      });
+
+      item3Price.addEventListener("change", function () {
+        // itemSum = item3Price.value * item3Num.value;
+        // item3.innerText = itemSum;
+        item3Fun();
+      });
+      item3Num.addEventListener("change", function () {
+        // itemSum = item3Price.value * item3Num.value;
+        // item3.innerText = itemSum;
+        item3Fun();
+      });
+      myBtn.addEventListener("click", function () {
+        let totalAll =
+          Number(item1.innerText) +
+          Number(item2.innerText) +
+          Number(item3.innerText);
+        if (totalAll >= 60000) {
+          total.innerText = totalAll * 0.9;
+          dis.innerText = totalAll * 0.1;
+        } else {
+          total.innerText = totalAll;
+          dis.innerText = 0;
+        }
+      });
+    </script>
+  </body>
+</html>

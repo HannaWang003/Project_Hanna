@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    img {
+      object-fit: cover;
+      width: 98vw;
+      height: 98vh;
+      object-position: center;
+    }
+  </style>
+  <body>
+    <div class="container-fluid p-2 text-center"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        let unsplashUrl =
+          "https://api.unsplash.com/search/photos?client_id=p_FXEKINRibJ8Pbk1sCvissC6mPMnIz9VwxwKupR2ZU";
+        $.ajax({
+          type: "get",
+          url: unsplashUrl,
+          data: {
+            query: "tokyo night",
+            // color:'white',
+            width: 1024,
+            height: 768,
+          },
+          success: function (data) {
+            let container = $(".container-fluid");
+            let num = data.results.length;
+            let key = Math.floor(Math.random() * num);
+            console.log(key);
+            // let qty = data.results.lenght();
+            // console.log(qty);
+            // for (let i = 0; i < data.results.length; i++) {
+            let img = $("<img>");
+            img.attr("src", data.results[key].urls.regular);
+            // console.log(img);
+            // 將圖片附加到容器中
+            container.append(img);
+            // }
+            // console.log(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

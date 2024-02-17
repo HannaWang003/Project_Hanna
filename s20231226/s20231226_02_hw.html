@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row col-6">
+        <label for="">order</label>
+        <input type="text" class="form-control" id="order" />
+      </div>
+      <div class="row col-6">
+        <label for="">price</label>
+        <input type="text" class="form-control" id="price" />
+      </div>
+      <div class="row col-6">
+        <label for="">Qty</label>
+        <input type="text" class="form-control" id="qty" />
+      </div>
+      <button
+        type="button"
+        class="btn btn-info mt-3"
+        id="myBtn"
+        onclick="enter()"
+      >
+        送出訂單
+      </button>
+      <div class="row mt-5">
+        <h3 id="orderQ"></h3>
+        <h1>全部訂單總額</h1>
+        <div id="total"></div>
+        <h1>全部訂單總量</h1>
+        <div id="qtotal"></div>
+      </div>
+    </div>
+
+    <script>
+      let Order = document.getElementById("order");
+      let Price = document.getElementById("price");
+      let MyBtn = document.getElementById("myBtn");
+      let Total = document.getElementById("total");
+      let QTotal = document.getElementById("qtotal");
+      let Qty = document.getElementById("qty");
+      let OrderQ = document.getElementById("orderQ");
+      let Od = [];
+      let Pe = [];
+      let Qy = [];
+      let sum = "";
+      let qtysum = "";
+      function enter() {
+        sum = Number(0);
+        qtysum = Number(0);
+        Od.push(Order.value);
+        Pe.push(Price.value);
+        Qy.push(Qty.value);
+        Qy.forEach((val, key) => {
+          qtysum += Number(val);
+          sum += Number(val) * Number(Pe[key]);
+        });
+        console.log(Od.length);
+        console.log(sum);
+        Total.innerHTML = `<div class='text-warning fs-3'>${sum}</div>`;
+        QTotal.innerHTML = `<div class='text-warning fs-3'>${qtysum}</div>`;
+        OrderQ.innerHTML = `訂單數:${Od.length}`;
+      }
+      let obj = {
+        10: "amy_10",
+        yyy: "hello_yyy",
+      };
+    </script>
+  </body>
+</html>

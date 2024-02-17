@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    .container {
+      overflow: hidden;
+    }
+    .box {
+      width: 300px;
+      height: 300px;
+    }
+    .myBtn {
+      border-radius: 20px 20px 0 0;
+      margin-right: -20px;
+    }
+  </style>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-between">
+        <button
+          data-page="#page1"
+          type="button"
+          class="col myBtn border-0 bg-danger"
+        >
+          1
+        </button>
+        <button
+          data-page="#page2"
+          type="button"
+          class="col myBtn border-0 bg-info"
+        >
+          2
+        </button>
+        <button
+          data-page="#page3"
+          type="button"
+          class="col myBtn border-0 bg-warning"
+        >
+          3
+        </button>
+        <button
+          data-page="#page4"
+          type="button"
+          class="col myBtn border bg-primary"
+        >
+          4
+        </button>
+      </div>
+      <div class="row">
+        <div class="col box border border-5 border-danger" id="page1">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore sed
+          optio, voluptatem quisquam vero unde odit minus officia atque laborum,
+          ea sit laboriosam vitae veritatis eligendi, magnam laudantium minima
+          error. Ducimus veritatis voluptates autem repudiandae. Dolorum,
+          accusamus. Illum est minima fuga ipsa culpa praesentium cupiditate
+          exercitationem atque, aspernatur, a rem recusandae doloribus
+          reiciendis! Inventore velit magnam quos est dolorem id?
+        </div>
+        <div class="col box border border-5 border-info" id="page2">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          deleniti, quae nihil quos quo velit explicabo tempore nisi laborum
+          architecto laudantium optio necessitatibus unde eius sint aliquam
+          dolorum iste dicta.
+        </div>
+        <div class="col box border border-5 border-warning" id="page3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          provident maiores quis perspiciatis doloribus nam, iusto natus fuga
+          nesciunt est quos molestiae minus asperiores alias eligendi doloremque
+          dolore placeat ex? Dolore ex nam, aliquam a adipisci nulla ratione
+          atque cupiditate iure sapiente commodi natus officia eligendi odio
+          similique laboriosam eius enim eveniet ad laborum consequatur? Quos
+          voluptates ipsum fugit reiciendis? Libero labore adipisci error nam
+          nisi commodi tempora sapiente ea consequatur, minus ut facere corporis
+          inventore cupiditate aperiam quis mollitia. Harum nesciunt dolores ad
+          quod nam numquam, nostrum amet officiis.
+        </div>
+        <div class="col box border border-5 border-primary" id="page4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur
+          at, reiciendis minima perspiciatis debitis perferendis? Deleniti
+          pariatur corporis laborum, ipsum enim beatae voluptate harum, ipsam
+          cumque earum incidunt laboriosam magni. Eligendi, laboriosam quos
+          minus quasi maiores iure? Itaque maiores earum at quae eaque
+          inventore, labore quam maxime ipsam porro? Quibusdam sequi similique
+          temporibus eum dolores. Maiores quod officiis minus itaque.
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //啟用jquery
+      $("document").ready(function () {
+        //老師的寫法
+        const myBtn = $(".myBtn");
+        const box = $(".box");
+        box.hide();
+        box.eq(0).show();
+
+        myBtn.click(function () {
+          let getDataPage = $(this).attr("data-page");
+          myBtn.attr("style", "z-index:0");
+          $(this).attr("style", "z-index:10");
+          box.hide();
+          $(getDataPage).slideDown(2000);
+        });
+
+        //我的寫法
+        // const box = $(".box");
+        // const myBtn = $(".myBtn");
+
+        // box.hide();
+        // box.eq(0).show();
+
+        // myBtn.click(function () {
+        //   box.each(function () {
+        //     box.hide();
+        //     myBtn.removeClass("text-light");
+        //   });
+        //   let key = $(this).index(".myBtn");
+        //   box.eq(key).show();
+        //   myBtn.eq(key).addClass("text-light");
+        // });
+      });
+    </script>
+  </body>
+</html>
