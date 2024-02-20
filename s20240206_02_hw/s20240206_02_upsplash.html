@@ -39,7 +39,7 @@
       "
     >
       <input type="text" name="" id="location" />
-      <button class="btn btn-dark" onclick="choice()">how is weather?</button>
+      <button class="btn btn-dark" id="myBtn">how is weather?</button>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -47,17 +47,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="../ignore/script.js"></script>
     <script>
       //啟用jquery
-      let unsplashUrl =
-        "https://api.unsplash.com/search/photos?client_id=p_FXEKINRibJ8Pbk1sCvissC6mPMnIz9VwxwKupR2ZU";
-      choice("japan");
-      function choice(location) {
-        location = $("#location").val();
-        console.log(location);
+      let myBtn = $("#myBtn");
+      unsplash("japan");
+      function unsplash(location) {
         $.ajax({
           type: "get",
-          url: unsplashUrl,
+          url: upsplashUrl,
           data: {
             query: location,
             // color:'white',
@@ -76,12 +74,28 @@
             img.attr("src", data.results[key].urls.regular);
             // console.log(img);
             // 將圖片附加到容器中
-            container.append(img);
+            container.html(img);
             // }
             // console.log(data);
           },
         });
+        $.ajax({
+          type: "get",
+          url: openweatherUrl,
+          data: {
+            q: location,
+            limit: "5",
+          },
+          success: (data) => {
+            console.log(data);
+          },
+        });
       }
+      myBtn.on("click", function () {
+        let selectLoc = $("#location").val();
+        console.log(selectLoc);
+        unsplash(selectLoc);
+      });
     </script>
   </body>
 </html>
