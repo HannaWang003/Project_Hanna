@@ -15,7 +15,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../ignore/script.js"></script>
   </head>
   <style>
     * {
@@ -27,60 +31,87 @@
       height: 98vh;
       object-position: center;
     }
-  </style>
-  <body>
-    <div class="container-fluid p-2 text-center"></div>
-    <div
-      style="
-        background: transparent;
+    #loct{
+      mix-blend-mode: difference;
+      color:black;
+      font-size:2rem;
+    text-align:end;
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    text-shadow:
+    1px 1px 0px #fff,
+    2px 2px 0px #000,
+    3px 3px 0px #fff,
+    4px 4px 0 #000,
+    5px 5px 0 #fff,
+    6px 6px 0 #000,
+    7px 7px 0 #fff,
+    8px 8px 0 #000;
+    }
+    #weatherIcon img{
+    width:100px;
+    height:100px;
+    }
+    #condition{
+      background: transparent;
         backdrop-filter: blur(50px);
-        width: 300px;
-        height: 300px;
+        width: 20vw;
+        height: 20vw;
         position: absolute;
         top: 50px;
         right: 50px;
         border-radius: 10px;
         padding: 20px;
-      "
-    >
-      <h3
-        id="weather"
-        style="font-weight: bolder; mix-blend-mode: difference"
-      ></h3>
-      <h4 id="temp"></h4>
-    </div>
-    <div
-      style="
+        box-shadow:
+    1px 1px 0px #fff,
+    2px 2px 0px #000,
+    3px 3px 0px #fff,
+    4px 4px 0 #000,
+    5px 5px 0 #fff,
+    6px 6px 0 #000,
+    7px 7px 0 #fff,
+    8px 8px 0 #000;
+    }
+    #weather{
+    font-weight: bolder; 
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+    }
+    #search{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-      "
-    >
+    }
+  </style>
+  <body>
+    <div class="container-fluid p-2 text-center"></div>
+    <div id="condition">
+      <div id="loct"></div>
+      <div id="weatherIcon"></div>
+      <h3 id="weather"></h3>
+      <h5 id="temp"></h5>
+    </div>
+    <div id="search">
       <input type="text" name="" id="location" />
       <button class="btn btn-dark" id="myBtn">how is weather?</button>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../ignore/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      //啟用jquery
       let myBtn = $("#myBtn");
-      let lat = $("#lat");
-      let lon = $("#lon");
+      let loct = $('#loct');
       let weather = $("#weather");
       let temp = $("#temp");
+      let weatherIcon = $('#weatherIcon');
       unsplash("japan");
       function unsplash(location) {
         $.ajax({
           type: "get",
           url: unsplashUrl,
           data: {
-            query: location,
+            // query:location+'+night',
+            query:location,
             // color:'white',
             width: 1024,
             height: 768,
@@ -90,16 +121,9 @@
             let num = data.results.length;
             let key = Math.floor(Math.random() * num);
             console.log(key);
-            // let qty = data.results.lenght();
-            // console.log(qty);
-            // for (let i = 0; i < data.results.length; i++) {
             let img = $("<img>");
             img.attr("src", data.results[key].urls.regular);
-            // console.log(img);
-            // 將圖片附加到容器中
             container.html(img);
-            // }
-            // console.log(data);
           },
         });
         $.ajax({
@@ -109,14 +133,16 @@
             q: location,
           },
           success: (data) => {
-            // 抓出經緯度
-            // lat.val(data[0].lat);
-            // lon.val(data[0].lon);
             console.log(data);
             let NowWeather = data.weather[0].description;
+            let icon = data.weather[0].icon;
             let NowTemp = (Number(data.main.temp) - 273.15).toFixed(1);
+            loct.html(data.name);
             weather.html(`${NowWeather}`);
             temp.html(`Celsius: ${NowTemp} deg`);
+            let img=$('<img>');
+            img.attr('src','https://openweathermap.org/img/wn/'+icon+'@2x.png')
+            weatherIcon.html(img);
           },
         });
       }
