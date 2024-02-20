@@ -32,6 +32,25 @@
     <div class="container-fluid p-2 text-center"></div>
     <div
       style="
+        background: transparent;
+        backdrop-filter: blur(50px);
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        border-radius: 10px;
+        padding: 20px;
+      "
+    >
+      <h3
+        id="weather"
+        style="font-weight: bolder; mix-blend-mode: difference"
+      ></h3>
+      <h4 id="temp"></h4>
+    </div>
+    <div
+      style="
         position: absolute;
         top: 50%;
         left: 50%;
@@ -51,6 +70,10 @@
     <script>
       //啟用jquery
       let myBtn = $("#myBtn");
+      let lat = $("#lat");
+      let lon = $("#lon");
+      let weather = $("#weather");
+      let temp = $("#temp");
       unsplash("japan");
       function unsplash(location) {
         $.ajax({
@@ -84,10 +107,16 @@
           url: openweatherUrl,
           data: {
             q: location,
-            limit: "5",
           },
           success: (data) => {
+            // 抓出經緯度
+            // lat.val(data[0].lat);
+            // lon.val(data[0].lon);
             console.log(data);
+            let NowWeather = data.weather[0].description;
+            let NowTemp = (Number(data.main.temp) - 273.15).toFixed(1);
+            weather.html(`${NowWeather}`);
+            temp.html(`Celsius: ${NowTemp} deg`);
           },
         });
       }
