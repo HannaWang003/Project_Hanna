@@ -15,11 +15,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../ignore/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+
+    <script src="../ignore/script.js"></script>
   </head>
   <style>
     * {
@@ -31,79 +41,94 @@
       height: 98vh;
       object-position: center;
     }
-    #loct{
+    #loctTitle {
       mix-blend-mode: difference;
-      color:black;
-      font-size:2rem;
-    text-align:end;
-    font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    text-shadow:
-    1px 1px 0px #fff,
-    2px 2px 0px #000,
-    3px 3px 0px #fff,
-    4px 4px 0 #000,
-    5px 5px 0 #fff,
-    6px 6px 0 #000,
-    7px 7px 0 #fff,
-    8px 8px 0 #000;
+      color: black;
+      font-size: min(8vw, max(100px, 8vw));
+      mix-blend-mode: difference;
+      /* text-align: end; */
+      font-family: "Russo One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-shadow: 1px 1px 0px #fff, 2px 2px 0px #000, 3px 3px 0px #fff,
+        4px 4px 0 #000, 5px 5px 0 #fff, 6px 6px 0 #000, 7px 7px 0 #fff,
+        8px 8px 0 #000;
     }
-    #weatherIcon img{
-    width:100px;
-    height:100px;
+    #weatherIcon img {
+      width: 100px;
+      height: 100px;
     }
-    #condition{
-      background: transparent;
-        backdrop-filter: blur(50px);
-        width: 20vw;
-        height: 20vw;
-        position: absolute;
-        top: 50px;
-        right: 50px;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow:
-    1px 1px 0px #fff,
-    2px 2px 0px #000,
-    3px 3px 0px #fff,
-    4px 4px 0 #000,
-    5px 5px 0 #fff,
-    6px 6px 0 #000,
-    7px 7px 0 #fff,
-    8px 8px 0 #000;
+    #condition {
+      background: rgba(0 0 0 0.8);
+      color: #fff;
+      backdrop-filter: blur(50px);
+      min-width: 300px;
+      height: 300px;
+      top: 50px;
+      right: 50px;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 1px 1px 0px #fff, 2px 2px 0px #000, 3px 3px 0px #fff,
+        4px 4px 0 #000, 5px 5px 0 #fff, 6px 6px 0 #000, 7px 7px 0 #fff,
+        8px 8px 0 #000, 9px 9px 0 #fff, 10px 10px 0 #000, 11px 11px 0 #fff,
+        12px 12px 0 #000, 13px 13px 0 #fff, 14px 14px 0 #000, 15px 15px 0 #fff,
+        0 0 200px #fff;
     }
-    #weather{
-    font-weight: bolder; 
-    mix-blend-mode: difference;
-    text-transform: uppercase;
+    #weather {
+      font-weight: bolder;
+      mix-blend-mode: difference;
+      text-transform: uppercase;
     }
-    #search{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #search {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .loct {
+      text-transform: uppercase;
     }
   </style>
   <body>
     <div class="container-fluid p-2 text-center"></div>
-    <div id="condition">
-      <div id="loct"></div>
-      <div id="weatherIcon"></div>
-      <h3 id="weather"></h3>
-      <h5 id="temp"></h5>
+    <div id="condition" class="position-absolute col-10 col-sm-3">
+      <div class="row">
+        <div>
+          <!-- <div class="loct" id="loct"></div> -->
+          <div id="weatherIcon"></div>
+          <h3 id="weather"></h3>
+          <h5 id="temp"></h5>
+        </div>
+      </div>
     </div>
-    <div id="search">
-      <input type="text" name="" id="location" />
-      <button class="btn btn-dark" id="myBtn">how is weather?</button>
+    <div id="search" class="container">
+      <div class="row">
+        <div class="col m-5">
+          <h1 class="textillate loct" id="loctTitle"></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5 offset-2">
+          <input
+            class="form-control bg-light"
+            type="text"
+            name=""
+            id="location"
+            placeholder="Anywhere you want"
+          />
+        </div>
+        <div class="col-5">
+          <button class="btn btn-dark" id="myBtn">how is weather?</button>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       let myBtn = $("#myBtn");
-      let loct = $('#loct');
+      let loct = $(".loct");
       let weather = $("#weather");
       let temp = $("#temp");
-      let weatherIcon = $('#weatherIcon');
+      let weatherIcon = $("#weatherIcon");
       unsplash("japan");
       function unsplash(location) {
         $.ajax({
@@ -111,7 +136,7 @@
           url: unsplashUrl,
           data: {
             // query:location+'+night',
-            query:location,
+            query: location,
             // color:'white',
             width: 1024,
             height: 768,
@@ -140,11 +165,18 @@
             loct.html(data.name);
             weather.html(`${NowWeather}`);
             temp.html(`Celsius: ${NowTemp} deg`);
-            let img=$('<img>');
-            img.attr('src','https://openweathermap.org/img/wn/'+icon+'@2x.png')
+            let img = $("<img>");
+            img.attr(
+              "src",
+              "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+            );
             weatherIcon.html(img);
+            initTextillate();
           },
         });
+      }
+      function initTextillate() {
+        $(".textillate").textillate({ in: { effect: "rollIn" } });
       }
       myBtn.on("click", function () {
         let selectLoc = $("#location").val();
