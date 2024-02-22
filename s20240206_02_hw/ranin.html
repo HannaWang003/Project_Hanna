@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+     body {
+                overflow: hidden;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            section{
+            position:relative;
+            width:100%;
+            height:100vh;
+            overflow:hidden;
+            }
+
+           section img {
+                width: 100%;
+                height: 100%;
+            }
+
+</style>
+<body>
+    <section>
+        <img id="background" alt="background" src="" />
+    </section>
+    <script src="./rainyday.min.js"></script>
+    <script>
+        const image = document.getElementById('background');
+        function rain(){
+        image.onload = function(){
+            var rainyDay = new RainyDay({
+            image:this,
+            })
+            RainDay.rain([
+        [5,2,2]
+        ],0)
+        }
+        image.src="./bg.jpg";
+        }
+        rain();
+    </script>
+</body>
+</html>

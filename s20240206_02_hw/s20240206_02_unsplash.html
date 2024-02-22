@@ -21,20 +21,25 @@
       href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
-
+    <script src="./rainyday.min.js"></script>
     <script src="../ignore/script.js"></script>
   </head>
   <style>
-    * {
-      box-sizing: border-box;
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     }
+     body {
+                /* overflow: hidden; */
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
     img {
       object-fit: cover;
       width: 98vw;
@@ -88,9 +93,21 @@
     .loct {
       text-transform: uppercase;
     }
+    #mask{
+      position:absolute;
+      top:0;
+      left:0;
+    width:100vw;
+    height:100vh;
+    pointer-events:none;
+    opacity:0.3;
+    }
   </style>
   <body>
-    <div class="container-fluid p-2 text-center"></div>
+    <div class="container-fluid p-2 text-center">
+      <img src="" alt="" id="mask">
+      <img src="" alt="" id="background">
+    </div>
     <div id="condition" class="position-absolute col-10 col-sm-3">
       <div class="row">
         <div>
@@ -129,9 +146,32 @@
       let weather = $("#weather");
       let temp = $("#temp");
       let weatherIcon = $("#weatherIcon");
-      unsplash("japan");
+      let image = $('#background')
+      let mask = $('#mask')
+      // $("#loctTitle").textillate();
+      function rain(){
+        mask.onload = function(){
+            var rainyDay = new RainyDay({
+            mask:this,
+            })
+            RainDay.rain([
+        [5,2,2]
+        ],0)
+        }
+        mask.attr("src","./bg.jpg");
+        }
+      function inTextillate(){
+        $("#loctTitle").textillate({
+              loop:false,
+              in: {
+    effect: 'fadeInLeftBig',
+    delayScale: 1.5,
+    delay: 200,
+  }
+            });
+      }
       function unsplash(location) {
-        $.ajax({
+          $.ajax({
           type: "get",
           url: unsplashUrl,
           data: {
@@ -145,10 +185,10 @@
             let container = $(".container-fluid");
             let num = data.results.length;
             let key = Math.floor(Math.random() * num);
-            console.log(key);
-            let img = $("<img>");
-            img.attr("src", data.results[key].urls.regular);
-            container.html(img);
+            console.log(data.results[key].urls.regular);
+            // let img = $("<img>");
+            image.attr("src", data.results[key].urls.regular);
+            rain();
           },
         });
         $.ajax({
@@ -167,22 +207,25 @@
             temp.html(`Celsius: ${NowTemp} deg`);
             let img = $("<img>");
             img.attr(
-              "src",
-              "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+            "src",
+            "https://openweathermap.org/img/wn/" + icon + "@2x.png"
             );
-            weatherIcon.html(img);
-            initTextillate();
+            weatherIcon.html(img);       
           },
+          complete:function(){
+              inTextillate(); 
+              $('#loctTitle').textillate('destroy');
+              // rain(data.results[key].urls.regular)  
+              console.log(image.src);         
+      
+          }
         });
-      }
-      function initTextillate() {
-        $(".textillate").textillate({ in: { effect: "rollIn" } });
       }
       myBtn.on("click", function () {
         let selectLoc = $("#location").val();
-        console.log(selectLoc);
         unsplash(selectLoc);
       });
+      unsplash("japan");
     </script>
   </body>
 </html>
