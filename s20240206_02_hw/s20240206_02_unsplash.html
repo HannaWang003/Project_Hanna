@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
@@ -48,8 +49,6 @@
     #loctTitle {
       color: #aaa;
       font-size: min(18vw,max(150px,12vw));
-      /* mix-blend-mode:difference; */
-      /* text-align: end; */
       color:#000;
       font-family: "Russo One", sans-serif;
       font-weight: 400;
@@ -71,24 +70,26 @@
       height: 100px;
     }
     #condition {
-      background: rgba(0 0 0 0.8);
+      background: rgba(0 0 0 0.9);
+      backdrop-filter: blur(5px);
+      /* mix-blend-mode: difference; */
       color: #fff;
-      backdrop-filter: blur(50px);
       min-width: 300px;
       height: 300px;
-      top: 50px;
-      right: 50px;
+      top: 0;
+      right: 0;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 1px 1px 0px #fff, 2px 2px 0px #000, 3px 3px 0px #fff,
-        4px 4px 0 #000, 5px 5px 0 #fff, 6px 6px 0 #000, 7px 7px 0 #fff,
-        8px 8px 0 #000, 9px 9px 0 #fff, 10px 10px 0 #000, 11px 11px 0 #fff,
-        12px 12px 0 #000, 13px 13px 0 #fff, 14px 14px 0 #000, 15px 15px 0 #fff,
-        0 0 200px #fff;
+      text-shadow:0 0 5px #000;
+       box-shadow: -1px 1px 0px #fff, -2px 2px 0px #000, -3px 3px 0px #fff,
+        -4px 4px 0 #000, -5px 5px 0 #fff, -6px 6px 0 #000, -7px 7px 0 #fff,
+        -8px 8px 0 #000, -9px 9px 0 #fff, -10px 10px 0 #000, -11px 11px 0 #fff,
+        -12px 12px 0 #000, -13px 13px 0 #fff, -14px 14px 0 #000, -15px 15px 0 #fff,
+        inset 0px 0px 25px #000; 
     }
     #weather {
       font-weight: bolder;
-      mix-blend-mode: difference;
+      /* mix-blend-mode: difference; */
       text-transform: uppercase;
     }
     #search {
@@ -107,7 +108,7 @@
     width:100vw;
     height:100vh;
     pointer-events:none;
-    opacity:0.3;
+    opacity:0.2;
     }
   </style>
   <body>
@@ -120,7 +121,7 @@
         <div class="col position-absolute" style="top:70%;">
             <h1 class="textillate loct text-sm-start text-center" id="loctTitle"></h1>
         </div>
-        <div id="condition" class="position-absolute col-10 col-sm-3">
+        <div id="condition" class="position-absolute col-9 col-sm-3 m-5">
           <!-- <div class="loct" id="loct"></div> -->
           <div id="weatherIcon"></div>
           <h3 id="weather"></h3>
@@ -128,23 +129,20 @@
           <h5 id="humidity"></h5>
         </div>
       </div>
-      <div class="row">
-        
-      </div>
     </div>
     <div id="search" class="container">
-      <div class="row justify-content-center">
-        <div class="col-5">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-6">
           <input
-            class="form-control bg-light"
+            class="form-control bg-light p-3"
             type="text"
             name=""
             id="location"
             placeholder="Anywhere you want"
           />
         </div>
-        <div class="col-5">
-          <button class="btn btn-dark" id="myBtn">how is weather?</button>
+        <div class="col-6">
+          <button class="btn btn-dark p-3" id="myBtn">How's weather</button>
         </div>
       </div>
     </div>
