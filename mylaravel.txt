@@ -1,0 +1,47 @@
+1.
+composer create-project laravel/laravel example-app
+composer create-project laravel/laravel mylaravel
+composer create-project laravel/laravel laravel0229
+
+2.
+cd example-app 
+php artisan serve
+cd mylaravel 
+php artisan serve
+cd laravel0229 
+php artisan serve
+
+3.
+http://localhost:8000/
+
+4.
+退出執行狀態
+ctrl+c
+ctrl+q
+q
+esc
+--------------------------------------------------------------------------
+5._設定controller
+php artisan make:controller UserController
+php artisan make:controller CatController
+php artisan make:controller DogController
+
+6.(DogController.php)
+
+use Illuminate\View\View;
+ 
+class UserController extends Controller
+{
+    public function run()
+    {
+        return view('dog')
+    }
+}
+
+7.(web.php)
+use App\Http\Controllers\DogController;
+ 
+Route::get('/dog_run', [DogController::class, 'run']);
+----------------------------------------------------------------------------
+
+
